@@ -3,27 +3,31 @@ import java.util.Arrays;
 
 class Percolation {
     int[][] per;
+    int opensites;
    public Percolation(int n){
     per = new int[n][n];
+    opensites = 0;
         // create n-by-n grid, with all sites blocked
    }
     public void open(int row, int col){
     // open site (row, col) if it is not open already
-        per[row][col] = 2;        
+        per[row - 1][col - 1] = 2;
+        opensites++;
+
     }
     public boolean isOpen(int row, int col) {
     // is site (row, col) open?
-        return false;
+        return per[row - 1][col - 1] == 2;
         
     }
     public boolean isFull(int row, int col) {
     // is site (row, col) full?
-        return false;
+        return per[row - 1][col - 1] == 0;
         
     }
     public int numberOfOpenSites() {
     // number of open sites
-        return 1;
+        return opensites;
         
     }
     public boolean percolates() {
@@ -44,10 +48,6 @@ class Solution {
             String line = s.nextLine();
             String[] tokens = line.split(" ");
             perc.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
-            for (int i = 0; i < h; i++) {
-            System.out.println(Arrays.toString(perc.per[i]));
-                
-            }
         }
     }
 }
