@@ -73,11 +73,13 @@ class Percolation {
 class Solution {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int size=s.nextInt();
-        Percolation pr=new Percolation(size);
-        while(s.hasNext()) {
-            pr.open(s.nextInt(),s.nextInt());
+        int h = Integer.parseInt(s.nextLine());
+        Percolation perc = new Percolation(h);
+        while (s.hasNext()) {
+            String line = s.nextLine();
+            String[] tokens = line.split(" ");
+            perc.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
         }
-        System.out.println(pr.percolates());
+        System.out.println(perc.percolates());
     }
 }
