@@ -19,7 +19,7 @@ class Percolation {
     /**
      * object for weighted union class.
      */
-    WeightedQuickUnionUF cd;
+    private WeightedQuickUnionUF cd;
     // private Weightedunion cd;
 /**
  * Constructs the object.
@@ -29,7 +29,7 @@ class Percolation {
     Percolation(final int n) {
         grid = new int[n][n];
         cnt = 0;
-        cd = new WeightedQuickUnionUF((n * n)+2);
+        cd = new WeightedQuickUnionUF((n * n) + 2);
         this.size = n;
     }
     /**
