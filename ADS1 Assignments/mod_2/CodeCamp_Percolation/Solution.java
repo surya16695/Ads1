@@ -10,7 +10,8 @@ class Percolation {
    public Percolation(int size){
     per = new int[size][size];
     opensites = 0;
-        // create n-by-n grid, with all sites blocked
+    wqu = new WeightedQuickUnionUF((size * size) + 2);
+        // create size-by-size grid, with all sites blocked
    }
     public void open(int row, int col){
     // open site (row, col) if it is not open already
@@ -20,25 +21,25 @@ class Percolation {
        col = col-1;
        per[row][col] = 1;
        opensites++;
-       if(row==0){
+       if(row == 0){
         wqu.union(0,component(row,col));
        }
-       if(row == size-1){
-        wqu.union(((size*size)+1),component(row,col));
+       if(row == size - 1){
+        wqu.union(((size * size) + 1),component(row,col));
        }
-       if(row>0 && row <= size-1){
-        if(per[row+1][col]==1) {
+       if(row > 0 && row <= size - 1){
+        if(per[row+1][col] == 1) {
             wqu.union(component(row,col), component(row+1,col));
         }
        }
-       if(row<=size-1){
-        if(per[row-1][col]==1) {
+       if(row <= size-1){
+        if(per[row-1][col] == 1) {
             wqu.union(component(row,col), component(row-1,col));
         }
        }
 
-       if(col>0 ){
-        if(per[row][col-1]==1) {
+       if(col > 0 ){
+        if(per[row][col-1] == 1) {
             wqu.union(component(row,col), component(row,col-1));
         }
        }
@@ -49,7 +50,7 @@ class Percolation {
    }
     public boolean isOpen(int row, int col) {
     // is site (row, col) open?
-        return per[row - 1][col - 1] == 2;
+        return per[row - 1][col - 1] == 1;
         
     }
     public boolean isFull(int row, int col) {
