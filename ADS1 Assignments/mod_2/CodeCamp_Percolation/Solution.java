@@ -45,16 +45,16 @@ class Percolation {
 
     }
    int component(int i,int j){
-     return ((i*size)+j)+1;
+     return ((i*size)+j);
    }
     public boolean isOpen(int row, int col) {
     // is site (row, col) open?
-        return per[row - 1][col - 1] == 1;
+        return per[row][col] == 1;
         
     }
     public boolean isFull(int row, int col) {
     // is site (row, col) full?
-        return per[row - 1][col - 1] == 0;
+        return per[row][col] == 0;
         
     }
     public int numberOfOpenSites() {
