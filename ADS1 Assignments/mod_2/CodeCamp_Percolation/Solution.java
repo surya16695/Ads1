@@ -1,85 +1,140 @@
+/* To import scanner class*/
 import java.util.Scanner;
-import java.util.Arrays;
-
+/**
+ * Class for percolation.
+ */
 class Percolation {
-    int[][] per;
-    int opensites;
-    int size;
-    WeightedQuickUnionUF wqu;
-
-   public Percolation(int size){
-    per = new int[size][size];
-    opensites = 0;
-    wqu = new WeightedQuickUnionUF((size * size) + 2);
-        // create size-by-size grid, with all sites blocked
-   }
-    public void open(int row, int col){
-    // open site (row, col) if it is not open already
-        // per[row - 1][col - 1] = 2;
-        // opensites++;
-       row = row - 1;
-       col = col-1;
-       per[row][col] = 1;
-       opensites++;
+/**
+ * variable to keep count value.
+ */
+    private int cnt;
+    /**
+     * to take 2 dimentional array.
+     */
+    private int[][] grid;
+    /**
+     * { to keep size }.
+     */
+    private int size;
+    /**
+     * object for weighted union class.
+     */
+    WeightedQuickUnionUF cd;
+    // private Weightedunion cd;
+/**
+ * Constructs the object.
+ *
+ * @param      n  The size
+ */
+    Percolation(final int n) {
+        grid = new int[n][n];
+        cnt = 0;
+        cd = new WeightedQuickUnionUF((n * n)+2);
+        this.size = n;
+    }
+    /**
+     * function to check whether the element has to be connected or not.
+     *
+     * @param      row   The value of row
+     * @param      col   The value of column
+     */
+    void open(final int row, final int col) {
+        grid[row][col] = 1;
+        cnt++;
         if (row == 0) {
-            wqu.union(0, component(row, col));
+            cd.union(0, component(row, col));
         }
         if (row == size - 1) {
-            wqu.union((size * size) + 1, component(row, col));
+            cd.union((size * size) + 1, component(row, col));
         }
-        if (row + 1 < size && per[row][col] == 1) {
-                wqu.union(
+        if (row + 1 < size && grid[row][col] == 1) {
+                cd.union(
                     component(row + 1, col), component(row, col));
             }
-        if (row - 1 >= 0 && per[row - 1][col] == 1) {
-                wqu.union(
+        if (row - 1 >= 0 && grid[row - 1][col] == 1) {
+                cd.union(
                     component(row - 1, col), component(row, col));
         }
-        if (col - 1 >= 0 && per[row][col - 1] == 1) {
-                wqu.union(component(row, col - 1), component(row, col));
+        if (col - 1 >= 0 && grid[row][col - 1] == 1) {
+                cd.union(component(row, col - 1), component(row, col));
         }
-        if (col + 1 < size && per[row][col + 1] == 1) {
-                wqu.union(
+        if (col + 1 < size && grid[row][col + 1] == 1) {
+                cd.union(
                     component(row, col + 1), component(row, col));
         }
-
     }
-   int component(int i,int j){
-     return ((i*size)+j);
-   }
-    public boolean isOpen(int row, int col) {
-    // is site (row, col) open?
-        return per[row][col] == 1;
-        
+    /**
+     * to get the component at the particular row and column.
+     *
+     * @param      i     row index is given.
+     * @param      j     column index is given
+     *
+     * @return     return type is int
+     */
+    int component(final int i, final int j) {
+        return (i) * size + j;
     }
-    public boolean isFull(int row, int col) {
-    // is site (row, col) full?
-        return per[row][col] == 0;
-        
+    /**
+     * Determines if open.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return     True if open, False otherwise.
+     */
+    boolean isOpen(final int row, final int col) {
+        return grid[row][col] == 1;
     }
-    public int numberOfOpenSites() {
-    // number of open sites
-        return opensites;
-        
+    /**
+     * Determines if full.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return     True if full, False otherwise.
+     */
+    boolean isFull(final int row, final int col) {
+        return grid[row][col] == 0;
     }
-    public boolean percolates() {
-    // does the system percolate?
-       return wqu.connected(0,(size*size)+1);        
+    /**
+     * to get the number of open sites.
+     *
+     * @return     integer is returned.
+     */
+    int numberofopensites() {
+        return cnt;
+    }
+    /**
+     * function to check if the grid percolates or not.
+     *
+     * @return     True if percolates, False otherwise.
+     */
+    boolean percolates() {
+        return cd.connected(0, (size * size) + 1);
     }
 }
-
-
-// You can implement the above API to solve the problem
+/**
+ * Class for solution.
+ */
 class Solution {
-    public static void main(String[] args) {
+    /**
+     * Constructs the object.
+     */
+    protected Solution() {
+
+    }
+    /**
+     * function of main.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        int h = Integer.parseInt(s.nextLine());
-        Percolation perc = new Percolation(h);
+        int n = s.nextInt();
+        Percolation wc = new Percolation(n);
         while (s.hasNext()) {
-            String line = s.nextLine();
-            String[] tokens = line.split(" ");
-            perc.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
+        wc.open(s.nextInt() - 1, s.nextInt() - 1);
         }
-        System.out.println(perc.percolates());
+        System.out.println(wc.percolates());
     }
 }
