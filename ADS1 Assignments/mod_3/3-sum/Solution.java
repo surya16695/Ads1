@@ -96,11 +96,19 @@ class Solution {
         // System.out.println(Arrays.toString(arr));
     }
 }
+/**
+ * Class for three sum.
+ */
 class threeSum {
-    int count;
+    private int count;
     threeSum() {
         count = 0;
     }
+    /**
+     * { function_description }
+     *
+     * @param      arr   The arr
+     */
     void findTrip(int[]arr) {
         int len = arr.length;
         Arrays.sort(arr);
@@ -109,7 +117,7 @@ class threeSum {
             int r = len - 1;
             int x = arr[i];
             while (j < r) {
-                int sum = x + arr[j]+arr[r];
+                int sum = x + arr[j] + arr[r];
                 if (sum == 0) {
                     count++;
                     j++;
