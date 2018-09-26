@@ -74,11 +74,11 @@ class threeSum {
         count = 0;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      arr   The arr
      */
-    void findTrip(int[]arr) {
+    void findTrip(final int[]arr) {
         int len = arr.length;
         Arrays.sort(arr);
         for (int i = 0; i < len - 1; i++) {
@@ -93,8 +93,7 @@ class threeSum {
                     r--;
                 } else if (sum < 0) {
                     j++;
-                    
-                }else {
+                } else {
                     r--;
                 }
             }
