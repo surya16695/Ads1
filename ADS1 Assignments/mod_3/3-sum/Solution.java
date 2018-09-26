@@ -48,13 +48,19 @@ import java.util.Arrays;
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    Solution () {
+
+    }
+    /**
      * { function_description }.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        threeSum t = new threeSum();
+        ThreeSum t = new ThreeSum();
         int n = s.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
@@ -68,15 +74,15 @@ class Solution {
 /**
  * Class for three sum.
  */
-class threeSum {
+class ThreeSum {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int count;
     /**
      * Constructs the object.
      */
-    threeSum() {
+    ThreeSum() {
         count = 0;
     }
     /**
