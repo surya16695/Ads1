@@ -21,10 +21,18 @@ class threeSum {
     }
     public int threeSumpairs(int[] arr) {
         Arrays.sort(arr);
+
         int a = 0;
         for (int j = 0; j < arr.length; j++) {
             for (int k = 0; k < arr.length; k++) {
                 a = arr[j] + arr[k];
+                if(a > 0){
+                    a=-(a);
+                }else{
+                    a = -1*a;
+                }
+                System.out.print(a+"*****");
+                System.out.println((Binarysearch(arr, a)));
                 if (Binarysearch(arr, a) == a) {
                     count++;
                  } 
@@ -41,14 +49,16 @@ class threeSum {
         int end = arraysent.length;
         for (int j = 0; j < arraysent.length; j++) {
             tempvar = (start + end)/2;
+            System.out.println(arraysent[tempvar] == number);
             if (arraysent[tempvar] == number) {
                 value = arraysent[tempvar];
-                break;
+                return value;
+                
             } else {
                 if (arraysent[tempvar] > number) {
-                    end = tempvar;
+                    end = tempvar-1;
                 } else {
-                    start = tempvar;
+                    start = tempvar+1;
                 }
             }
         }
