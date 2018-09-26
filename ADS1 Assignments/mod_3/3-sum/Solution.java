@@ -9,7 +9,7 @@ class Solution {
         for (int i = 0; i < n; i++) {
             arr[i] = s.nextInt();
         }
-        t.threeSumpairs(arr);
+        System.out.println(t.threeSumpairs(arr));
         // System.out.println(Arrays.toString(arr));
     }
 }
