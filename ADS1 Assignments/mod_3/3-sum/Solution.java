@@ -25,7 +25,7 @@ class threeSum {
         for (int j = 0; j < arr.length; j++) {
             for (int k = 0; k < arr.length; k++) {
                 a = arr[j] + arr[k];
-                if (Binarysearch(arr, a) == a) {
+                if (Binarysearch(arr, Math.abs(a)) == Math.abs(a)) {
                     count++;
                  } 
                 
