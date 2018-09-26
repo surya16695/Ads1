@@ -50,7 +50,7 @@ class Solution {
     /**
      * Constructs the object.
      */
-    Solution () {
+    protected Solution() {
 
     }
     /**
