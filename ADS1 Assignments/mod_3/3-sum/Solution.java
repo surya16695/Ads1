@@ -49,18 +49,18 @@ class threeSum {
         int end = arraysent.length;
         for (int j = 0; j < arraysent.length; j++) {
             tempvar = (start + end)/2;
-            System.out.println(arraysent[tempvar] == number);
+            
             if (arraysent[tempvar] == number) {
                 value = arraysent[tempvar];
-                return value;
-                
+                return value;   
+            } 
+            
+            if (arraysent[tempvar] > number) {
+                end = tempvar-1;
             } else {
-                if (arraysent[tempvar] > number) {
-                    end = tempvar-1;
-                } else {
-                    start = tempvar+1;
-                }
+                start = tempvar+1;
             }
+            
         }
         return value;
     }
