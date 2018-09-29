@@ -24,7 +24,6 @@ class AddLargeNumbers {
     }
 
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-        LinkedList fun = new LinkedList();
         int sum = 0;
         Stack surya = new Stack();
         String[] s = new String[list1.size()];
@@ -45,17 +44,24 @@ class AddLargeNumbers {
         if (list1.size() < list2.size()) {
             
             for (int i = 0; i < list2.size(); i++) {
+                LinkedList fun = new LinkedList();
                 sum += Integer.parseInt(teja.pop()) + Integer.parseInt(surya.pop());
+                String lol = sum + "";
+                fun.insert(lol);
+                return fun;
             }
         }else {
+            LinkedList fun = new LinkedList();
             for (int i = 0; i < list1.size(); i++) {
                 sum += Integer.parseInt(teja.pop()) + Integer.parseInt(surya.pop());
+                return fun;
+
             }
 
         }
-        String lol = sum + "";
-        fun.insert(lol);
-        return fun;
+        // String lol = sum + "";
+        // fun.insert(lol);
+        return null;
 
     }
 }
