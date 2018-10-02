@@ -111,7 +111,7 @@ class Solution {
 					st.pop() ;
 					if (st.isEmpty()) {
 						System.out.println("Steque is empty");
-						// System.out.println();
+						System.out.println();
 					}
 					System.out.println(st);	
 				} catch (Exception e) {
