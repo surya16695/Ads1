@@ -115,9 +115,10 @@ class Solution {
 					st.pop() ;
 					if (st.isEmpty()) {
 						System.out.println("Steque is empty");
-						System.out.println();
-					}
-					System.out.println(st);	
+						// System.out.println();
+					} else {
+					System.out.println(st);
+					}	
 				} catch (Exception e) {
 					System.out.println(e.getMessage()+"surya");
 				}
