@@ -122,6 +122,9 @@ class Solution {
 				st.enqueue(input[1]);
 				System.out.println(st);
 				break;
+				default:
+				st = new Steque();
+				break;
 			}
 
 		}
