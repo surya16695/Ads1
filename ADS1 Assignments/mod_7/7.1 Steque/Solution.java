@@ -91,7 +91,7 @@ class Steque {
 			s += temp.data+", ";
 			temp = temp.next;
 		}
-		return s;
+		return s.substring(0, s.length() - 2);
 	}
 }
 class Solution {
