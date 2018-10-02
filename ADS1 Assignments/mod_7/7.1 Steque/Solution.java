@@ -52,7 +52,7 @@ class Steque {
 	 */
 	String pop() throws Exception {
 		if (isEmpty()) {
-			throw new Exception ("Steque is empty");
+			throw new Exception ("Steque is empty.");
 		}
 		String data = start.data;
 		start = start.next;
@@ -114,7 +114,7 @@ class Solution {
 				try {
 					st.pop() ;
 					if (st.isEmpty()) {
-						System.out.println("Steque is empty");
+						System.out.println("Steque is empty.");
 					} else {
 					System.out.println(st);
 					}	
