@@ -85,13 +85,17 @@ class Steque {
 		size++;
 	}
 	public String toString() {
-		Node temp = start;
-		String s = "";
-		while(temp != null) {
-			s += temp.data+", ";
-			temp = temp.next;
-		}
+		if (size != 0) {
+			Node temp = start;
+			String s = "";
+			while(temp != null) {
+				s += temp.data+", ";
+				temp = temp.next;
+			}
 		return s.substring(0, s.length() - 2);
+			
+		}
+		return "";
 	}
 }
 class Solution {
