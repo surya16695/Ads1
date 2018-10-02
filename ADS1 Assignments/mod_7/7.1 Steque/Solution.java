@@ -39,6 +39,7 @@ class Steque {
 			start = obj;
 			end = obj;
 			size++;	
+			return;
 		}
 		obj.next = start;
 		start = obj;
@@ -76,7 +77,8 @@ class Steque {
 		if (size == 0) {
 			start = obj;
 			end = obj;
-			size++;	
+			size++;
+			return;	
 		}
 		end.next = obj;
 		end = obj;
