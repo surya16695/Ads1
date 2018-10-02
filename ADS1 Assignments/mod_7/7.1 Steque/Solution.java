@@ -115,7 +115,6 @@ class Solution {
 					st.pop() ;
 					if (st.isEmpty()) {
 						System.out.println("Steque is empty");
-						// System.out.println();
 					} else {
 					System.out.println(st);
 					}	
@@ -128,6 +127,7 @@ class Solution {
 				System.out.println(st);
 				break;
 				default:
+				System.out.println();
 				st = new Steque();
 				break;
 			}
