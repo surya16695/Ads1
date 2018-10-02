@@ -91,7 +91,7 @@ class Steque {
 			s += temp.data+", ";
 			temp = temp.next;
 		}
-		return s.substring(0, s.length() - 2);
+		return s.substring(0, s.length() - 2)+"error";
 	}
 }
 class Solution {
@@ -115,7 +115,7 @@ class Solution {
 					}
 					System.out.println(st);	
 				} catch (Exception e) {
-					System.out.println(e.getMessage());
+					System.out.println(e.getMessage()+"surya");
 				}
 				break;
 				case "enqueue" :
