@@ -88,7 +88,7 @@ class Steque {
 		Node temp = start;
 		String s = "";
 		while(temp != null) {
-			s += temp.data;
+			s += temp.data+", ";
 			temp = temp.next;
 		}
 		return s;
