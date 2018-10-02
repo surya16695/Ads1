@@ -27,12 +27,12 @@ class Solution {
                 break;
                 case "pop" :
                 try {
-                    st.pop() ;
+                    st.pop();
                     if (st.isEmpty()) {
                         System.out.println("Steque is empty.");
                     } else {
                         System.out.println(st);
-                    }   
+                    }
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
