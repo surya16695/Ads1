@@ -50,9 +50,9 @@ class Steque {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	String pop() throws Exception{
+	String pop() throws Exception {
 		if (isEmpty()) {
-			throw new Exception("Steque is empty");
+			throw new Exception ("Steque is empty");
 		}
 		String data = start.data;
 		start = start.next;
@@ -111,7 +111,7 @@ class Solution {
 					st.pop() ;
 					if (st.isEmpty()) {
 						System.out.println("Steque is empty");
-						System.out.println();
+						// System.out.println();
 					}
 					System.out.println(st);	
 				} catch (Exception e) {
