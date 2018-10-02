@@ -120,7 +120,7 @@ class Solution {
 					System.out.println(st);
 					}	
 				} catch (Exception e) {
-					System.out.println(e.getMessage()+"surya");
+					System.out.println(e.getMessage());
 				}
 				break;
 				case "enqueue" :
