@@ -43,9 +43,8 @@ class Team {
 		}
 		if (this.getDraws() < that.getDraws()) {
 			return -1;
-		}else {
-			return 0;
 		}
+			return 0;
 	}
 }
 /**
@@ -91,7 +90,7 @@ class Selection {
 		for (int i = 0; i < size-1; i++) {
 			int min = i;
 			for (int j = i+1; j < size; j++) {
-				if (less(array, i, j)) {
+				if (less(array, j, min)) {
 					min = j;
 				}
 			}
