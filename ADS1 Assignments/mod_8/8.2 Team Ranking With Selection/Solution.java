@@ -105,7 +105,8 @@ class Selection {
         sort(array, size);
         String s = "";
         for (int i = 0; i < size; i++) {
-            s += array[i].toString() + ",";
+        	System.out.println(array[i].name);
+            s += array[i].name + ",";
         }
         return s.substring(0, s.length() - 1);
 	}
