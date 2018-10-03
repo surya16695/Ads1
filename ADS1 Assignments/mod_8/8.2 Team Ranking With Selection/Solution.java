@@ -99,7 +99,7 @@ class Selection {
 		}
 	}
 	boolean less(Team[] arr, int index1, int index2) {
-		return arr[index1].compareTo(arr[index2]) > 0;
+		return arr[index1].compareTo(arr[index2]) < 0;
 	}
 	String leaderboard(Team[] array, int size) {
         sort(array, size);
