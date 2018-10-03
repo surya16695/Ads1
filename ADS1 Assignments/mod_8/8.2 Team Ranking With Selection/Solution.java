@@ -90,7 +90,7 @@ class Selection {
 		for (int i = 0; i < size-1; i++) {
 			int min = i;
 			for (int j = i+1; j < size; j++) {
-				if (less(array, j, min)) {
+				if (less(array, min, j)) {
 					min = j;
 				}
 			}
