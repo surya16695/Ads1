@@ -1,8 +1,19 @@
 import java.util.*;
+/**
+ * Class for solution.
+ */
 class Solution{
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
 
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Merge m = new Merge();
@@ -53,7 +64,7 @@ class Merge {
 		for (int i = 0; i < mid + 1; i++) {
 			temp1[i] = num[i];
 		}
-		for (int i = mid; i < max; i++) {
+		for (int i = mid + 1; i < max; i++) {
 			temp2[i] = num[i];
 		}
 		if (temp1.length <= 7) {
