@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -25,20 +25,17 @@ class Solution {
                     ll.insertAt(Integer.parseInt(values[1]),
                      new Node(values[2]));
                 ll.display();
-                }
+                } catch (Exception e) {
+                        System.out.println("Can't insert at this position.");
 
-                catch (Exception e) {
-                    System.out.println("Can't insert at this position.");
+                    }
 
-                }
                 break;
                 case "reverse":
                 try {
                     ll.reverse();
                 ll.display();
-                }
-
-                catch (Exception e) {
+                } catch (Exception e) {
                     System.out.println("No elements to reverse.");
                 }
                 break;
