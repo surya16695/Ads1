@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for node.
  */
@@ -27,7 +28,7 @@ class LinkedList {
     /**
      * { var_description }.
      */
-    Node start;
+    private Node start;
     /**
      * { var_description }.
      */
@@ -44,7 +45,7 @@ class LinkedList {
      *
      * @param      i     { parameter_description }
      */
-    void insert(Node i) {
+    void insert(final Node i) {
         if (size == 0) {
             start = i;
             return;
@@ -70,8 +71,7 @@ class LinkedList {
             size++;
             return;
         }
-        start =insertAt(index, start, n, 0); 
-
+        start = insertAt(index, start, n, 0);
     }
     /**
      * { function_description }.
@@ -83,12 +83,13 @@ class LinkedList {
      *
      * @return     { description_of_the_return_value }
      */
-    Node insertAt(final int index, final Node first, final Node element, final int count ) {
-        if(count == index) {
+    Node insertAt(final int index, final Node first,
+     final Node element, final int count) {
+        if (count == index) {
             element.next = first;
             return element;
         }
-        first.next = insertAt(index, first.next, element, count+1);
+        first.next = insertAt(index, first.next, element, count + 1);
         size++;
         return first;
     }
@@ -101,7 +102,7 @@ class LinkedList {
         if (start == null) {
             throw new Exception();
         }
-        reverse(null,start);
+        reverse(null, start);
     }
     /**
      * { function_description }.
@@ -135,13 +136,7 @@ class LinkedList {
  */
 class Solution {
     /**
-     * Constructs the object.
-     */
-    Solution() {
-
-    }
-    /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
