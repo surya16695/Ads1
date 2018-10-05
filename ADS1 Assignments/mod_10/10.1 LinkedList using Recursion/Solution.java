@@ -10,20 +10,20 @@ class Node {
 	 *
 	 * @param      val   The value
 	 */
-	Node(String val){
+	Node(String val) {
 		data = val;
 	}
 }
 /**
  * List of linkeds.
  */
-class LinkedList{
+class LinkedList {
 	Node start;
 	int size;
 	/**
 	 * Constructs the object.
 	 */
-	LinkedList(){
+	LinkedList() {
 		start = null;
 		size = 0;
 	}
@@ -32,7 +32,7 @@ class LinkedList{
 	 *
 	 * @param      i     { parameter_description }
 	 */
-	void insert(Node i){
+	void insert(Node i) {
 		if(size == 0){
 			start = i;
 			return;
@@ -46,13 +46,13 @@ class LinkedList{
 	 *
 	 * @throws     Exception  { exception_description }
 	 */
-	void insertAt(int index,Node n) throws Exception{
-		if(index < 0 || index > size){
+	void insertAt(int index,Node n) throws Exception {
+		if(index < 0 || index > size) {
 			throw new Exception("");
 
 					}
 
-		if(index == 0){
+		if(index == 0) {
 			n.next = start;
 			start = n;
 			size++;
@@ -71,7 +71,7 @@ class LinkedList{
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	Node insertAt(int index,Node first, Node element,int count ){
+	Node insertAt(int index,Node first, Node element,int count ) {
 		if(count == index){
 			element.next = first;
 			return element;
@@ -85,8 +85,8 @@ class LinkedList{
 	 *
 	 * @throws     Exception  { exception_description }
 	 */
-	void reverse() throws Exception{
-		if(start == null){
+	void reverse() throws Exception {
+		if(start == null) {
 			throw new Exception();
 		}
 		reverse(null,start);
@@ -97,8 +97,7 @@ class LinkedList{
 	 * @param      prev     The previous
 	 * @param      current  The current
 	 */
-	void reverse( Node prev, Node current)
-	{
+	void reverse( Node prev, Node current) {
 	   if(current!=null){
 	      reverse(current,current.next);
 	      current.next = prev;
@@ -109,7 +108,7 @@ class LinkedList{
 	/**
 	 * { function_description }
 	 */
-	void display(){
+	void display() {
 		Node temp = start;
 		String str="";
 		while(temp !=null){
@@ -122,7 +121,7 @@ class LinkedList{
 /**
  * Class for solution.
  */
-class Solution{
+class Solution {
 	/**
 	 * { function_description }
 	 *
@@ -131,11 +130,11 @@ class Solution{
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		LinkedList ll = new LinkedList();
-		while(sc.hasNextLine()){
+		while(sc.hasNextLine()) {
 			String[] values = sc.nextLine().split(" ");
 			switch (values[0]) {
 				case "insertAt":
-				try{
+				try {
 					ll.insertAt(Integer.parseInt(values[1]), new Node(values[2]));
 				ll.display();
 				}
@@ -146,12 +145,12 @@ class Solution{
 				}
 				break;
 				case "reverse":
-				try{
+				try {
 					ll.reverse();
 				ll.display();
 				}
 
-				catch(Exception e){
+				catch(Exception e) {
 					System.out.println("No elements to reverse.");
 				}
 				break;
