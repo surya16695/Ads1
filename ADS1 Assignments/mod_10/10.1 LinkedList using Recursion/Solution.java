@@ -16,7 +16,7 @@ class Node {
      *
      * @param      val   The value
      */
-    Node(String val) {
+    protected Node(final String val) {
         data = val;
     }
 }
@@ -31,11 +31,11 @@ class LinkedList {
     /**
      * { var_description }
      */
-    int size;
+    private int size;
     /**
      * Constructs the object.
      */
-    LinkedList() {
+    protected LinkedList() {
         start = null;
         size = 0;
     }
@@ -134,6 +134,12 @@ class LinkedList {
  * Class for solution.
  */
 class Solution {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
+
+    }
     /**
      * { function_description }
      *
