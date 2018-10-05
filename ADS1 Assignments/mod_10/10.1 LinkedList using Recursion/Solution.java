@@ -8,7 +8,7 @@ class Node {
      */
     String data;
     /**
-     * { var_description }
+     * { var_description }.
      */
     Node next;
     /**
@@ -25,11 +25,11 @@ class Node {
  */
 class LinkedList {
     /**
-     * { var_description }
+     * { var_description }.
      */
     Node start;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int size;
     /**
@@ -40,31 +40,31 @@ class LinkedList {
         size = 0;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      i     { parameter_description }
      */
     void insert(Node i) {
-        if(size == 0) {
+        if (size == 0) {
             start = i;
             return;
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index      The index
      * @param      n          { parameter_description }
      *
      * @throws     Exception  { exception_description }
      */
-    void insertAt(int index,Node n) throws Exception {
-        if(index < 0 || index > size) {
+    void insertAt(final int index, final Node n) throws Exception {
+        if (index < 0 || index > size) {
             throw new Exception("");
 
                     }
 
-        if(index == 0) {
+        if (index == 0) {
             n.next = start;
             start = n;
             size++;
@@ -74,7 +74,7 @@ class LinkedList {
 
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index    The index
      * @param      first    The first
@@ -83,7 +83,7 @@ class LinkedList {
      *
      * @return     { description_of_the_return_value }
      */
-    Node insertAt(int index, Node first, Node element, int count ) {
+    Node insertAt(final int index, final Node first, final Node element, final int count ) {
         if(count == index) {
             element.next = first;
             return element;
@@ -93,24 +93,24 @@ class LinkedList {
         return first;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
-     * @throws     Exception  { exception_description }
+     * @throws     Exception  { exception_description }.
      */
     void reverse() throws Exception {
-        if(start == null) {
+        if (start == null) {
             throw new Exception();
         }
         reverse(null,start);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      prev     The previous
      * @param      current  The current
      */
-    void reverse( Node prev, Node current) {
-       if(current != null) {
+    void reverse(final Node prev, final Node current) {
+       if (current != null) {
           reverse(current, current.next);
           current.next = prev;
         } else {
@@ -118,16 +118,16 @@ class LinkedList {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      */
     void display() {
         Node temp = start;
         String str = "";
-        while(temp != null) {
-            str += temp.data+", ";
+        while (temp != null) {
+            str += temp.data + ", ";
             temp = temp.next;
         }
-        System.out.println(str.substring(0, str.length()-2));
+        System.out.println(str.substring(0, str.length() - 2));
     }
 }
 /**
@@ -148,12 +148,13 @@ class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         LinkedList ll = new LinkedList();
-        while(sc.hasNextLine()) {
+        while (sc.hasNextLine()) {
             String[] values = sc.nextLine().split(" ");
             switch (values[0]) {
                 case "insertAt":
                 try {
-                    ll.insertAt(Integer.parseInt(values[1]), new Node(values[2]));
+                    ll.insertAt(Integer.parseInt(values[1]),
+                     new Node(values[2]));
                 ll.display();
                 }
 
@@ -171,6 +172,8 @@ class Solution {
                 catch (Exception e) {
                     System.out.println("No elements to reverse.");
                 }
+                break;
+                default :
                 break;
 
             }
