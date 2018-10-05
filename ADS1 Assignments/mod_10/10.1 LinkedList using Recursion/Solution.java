@@ -3,7 +3,13 @@ import java.util.*;
  * Class for node.
  */
 class Node {
+    /**
+     * { var_description }.
+     */
     String data;
+    /**
+     * { var_description }
+     */
     Node next;
     /**
      * Constructs the object.
@@ -18,7 +24,13 @@ class Node {
  * List of linkeds.
  */
 class LinkedList {
+    /**
+     * { var_description }
+     */
     Node start;
+    /**
+     * { var_description }
+     */
     int size;
     /**
      * Constructs the object.
@@ -71,7 +83,7 @@ class LinkedList {
      *
      * @return     { description_of_the_return_value }
      */
-    Node insertAt(int index,Node first, Node element,int count ) {
+    Node insertAt(int index, Node first, Node element, int count ) {
         if(count == index) {
             element.next = first;
             return element;
