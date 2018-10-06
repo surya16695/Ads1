@@ -1,8 +1,21 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for solution.
  */
 class Solution {
+	/**
+	 * { var_description }
+	 */
+	private int SIX = 6;
+	/**
+	 * { var_description }
+	 */
+	private int FIVE = 5;
+	/**
+	 * { var_description }
+	 */
+	private int FOUR = 4;
 	/**
 	 * { function_description }.
 	 *
@@ -20,7 +33,7 @@ class Solution {
 		int sc = (scan.nextInt());
 		for(int i = 0; i < asize; i++) {
 			String[] t = scan.nextLine().split(",");
-			stu[i] = new Student(t[0], t[1], Integer.parseInt(t[2]), Integer.parseInt(t[3]), Integer.parseInt(t[4]), Integer.parseInt(t[5]), t[6]);
+			stu[i] = new Student(t[0], t[1], Integer.parseInt(t[2]), Integer.parseInt(t[2 + 1]), Integer.parseInt(t[2 + 2]), Integer.parseInt(t[2 + 2 + 1]), t[2 + 2 + 2]);
 		}
 		System.out.println(Arrays.toString(stu));
 		//m.sort(stu);
