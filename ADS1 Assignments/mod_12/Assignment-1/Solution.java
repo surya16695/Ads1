@@ -25,6 +25,7 @@ final class Solution {
         int bc = (scan.nextInt());
         int st = (scan.nextInt());
         int sc = (scan.nextInt());
+        scan.nextLine();
         for (int i = 0; i < asize; i++) {
             String[] t = scan.nextLine().split(",");
             stu[i] = new Student(t[0], t[1], Integer.parseInt(t[2]),
