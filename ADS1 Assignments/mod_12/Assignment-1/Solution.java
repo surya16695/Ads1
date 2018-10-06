@@ -33,7 +33,7 @@ final class Solution {
              Integer.parseInt(t[2 + 2]), Integer.parseInt(t[2 + 2 + 1]),
               t[2 + 2 + 2]);
         }
+        m.sort(stu);
         System.out.println(Arrays.toString(stu));
-        //m.sort(stu);
     }
 }
