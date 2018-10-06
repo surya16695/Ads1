@@ -34,23 +34,23 @@ class Merge {
      * Time complexity is O(1)
      */
     private void sort(Comparable[] array, Comparable[] newarray, int lo, int hi) {
-        if (hi <= lo + CUTOFF) {
-            insertionSort(newarray, lo, hi);
-            System.out.println("Insertion sort method invoked...");
-            return;
-        }
-        int mid = lo + (hi - lo) / 2;
-        sort(newarray, array, lo, mid);
-        sort(newarray, array, mid+1, hi);
+            if (hi <= lo + CUTOFF) {
+                insertionSort(newarray, lo, hi);
+                System.out.println("Insertion sort method invoked...");
+                return;
+            }
+            int mid = lo + (hi - lo) / 2;
+            sort(newarray, array, lo, mid);
+            sort(newarray, array, mid+1, hi);
 
-        // if (!less(array[mid+1], array[mid])) {
-        //    for (int i = lo; i <= hi; i++) {
-        //     newarray[i] = array[i];
-        //     }
-        //     System.out.println("Array is already sorted. So, skipped the call to merge...");
-        //    return;
-        // }
-        merge(array, newarray, lo, mid, hi);
+            if (!less(array[mid+1], array[mid])) {
+               for (int i = lo; i <= hi; i++) {
+                newarray[i] = array[i];
+                }
+                System.out.println("Array is already sorted. So, skipped the call to merge...");
+               return;
+            }
+            merge(array, newarray, lo, mid, hi);
     }
     /**
      * Time complexity is O(1)
