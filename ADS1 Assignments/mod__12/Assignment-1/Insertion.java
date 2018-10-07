@@ -78,8 +78,32 @@ public class Insertion {
         Sort(array, size);
         String su = "";
         for (int i = 0; i < unreserved; i++) {
-            su += array[i].toString();
+            su += array[i].toString() + "\n";
+            // System.out.println(array[i].getreserve());
         }
+        // for (int j = unreserved - 1; j <  array.length; j++) {
+        //     if (array[j].getreserve().compareTo("BC")) {
+        //         int v = 0;
+        //         if (v < bc) {
+        //             su += array[j].toString() + "\n";
+        //             v++;
+        //         }
+        //     }
+        //     if (array[j].getreserve().compareTo("SC")) {
+        //         int f = 0;
+        //         if (f < sc) {
+        //             su += array[j].toString() + "\n";
+        //             f++;
+        //         }
+        //     }
+        //     if (array[j].getreserve().compareTo("ST")) {
+        //         int z = 0;
+        //         if (z < st) {
+        //             su += array[j].toString() + "\n";
+        //             z++;
+        //         }
+        //     }
+        // }
         return su;
     }
 }
