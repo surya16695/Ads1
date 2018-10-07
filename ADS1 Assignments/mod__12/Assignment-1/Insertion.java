@@ -62,7 +62,7 @@ public class Insertion {
         Sort(array, size);
         String s = "";
         for (int i = 0; i < size; i++) {
-            s += array[i].toString() + ",";
+            s += array[i].toString() + "/n";
         }
         return s.substring(0, s.length() - 1);
     }
