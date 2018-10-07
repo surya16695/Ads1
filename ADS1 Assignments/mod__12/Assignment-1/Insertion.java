@@ -81,29 +81,11 @@ public class Insertion {
             su += array[i].toString() + "\n";
             // System.out.println(array[i].getreserve());
         }
-        for (int j = unreserved - 1; j <  array.length; j++) {
-            if (array[j].getreserve().equals("BC")) {
-                int v = 0;
-                if (v < bc) {
-                    su += array[j].toString() + "\n";
-                    v++;
-                }
-            }
-            if (array[j].getreserve().equals("SC")) {
-                int f = 0;
-                if (f < sc) {
-                    su += array[j].toString() + "\n";
-                    f++;
-                }
-            }
-            if (array[j].getreserve().equals("ST")) {
-                int z = 0;
-                if (z < st) {
-                    su += array[j].toString() + "\n";
-                    z++;
-                }
-            }
+        student[] stude = new student[size - unreserved];
+        for (int i = unreserved - 1; i < size; i++) {
+            stude[i] = array[i];
         }
+        System.out.println(stude.toString());
         return su;
     }
 }
