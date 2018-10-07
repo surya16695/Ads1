@@ -1,3 +1,4 @@
+import java.util.Arrays;
 /**
  * Class for insertion.
  */
@@ -81,11 +82,25 @@ public class Insertion {
             su += array[i].toString() + "\n";
             // System.out.println(array[i].getreserve());
         }
-        student[] stude = new student[size - unreserved];
-        for (int i = unreserved - 1; i < size; i++) {
-            stude[i] = array[i];
-            System.out.println("*******************");
-            System.out.println(stude[i].toString());
+        int[] values = new int[bc + sc + st];
+        int i = 0;
+        for (int k = unreserved; k < size; k++) {
+            if (array[k].getreserve().equals("BC") && bc > 0) {
+                values[i++] = k;
+                bc--;
+            } else if (array[k].getreserve().
+                equals("SC") && sc > 0) {
+                values[i++] = k;
+                sc--;
+            } else if (array[k].getreserve().
+                equals("ST") && st > 0) {
+                values[i++] = k;
+                st--;
+            }
+        }
+        Arrays.sort(values);
+        for (int k = 0; k < values.length; k++) {
+            su += (array[values[k]].toString()) + "\n";
         }
         return su;
     }
