@@ -92,6 +92,16 @@ class student implements Comparable<student> {
         return this.reservation;
     }
     /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        String s = "";
+        s += this.name+" "+this.total+" "+this.reservation;
+        return s;
+    }
+    /**
      * { function_description }
      *
      * @param      that  The that
