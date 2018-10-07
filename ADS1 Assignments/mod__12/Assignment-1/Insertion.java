@@ -74,12 +74,12 @@ public class Insertion {
      *
      * @return     { description_of_the_return_value }
      */
-    public String seatAllotment(Comparable[] array, int size, int unreserved, int bc, int st, int sc) {
+    public String seatAllotment(student[] array, int size, int unreserved, int bc, int st, int sc) {
         Sort(array, size);
         String su = "";
         for (int i = 0; i < unreserved; i++) {
             su += array[i].toString() + "\n";
-            // System.out.println(array[i].getreserve());
+            System.out.println(array[i].getreserve());
         }
         // for (int j = unreserved - 1; j <  array.length; j++) {
         //     if (array[j].getreserve().compareTo("BC")) {
