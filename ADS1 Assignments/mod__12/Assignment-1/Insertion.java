@@ -84,8 +84,9 @@ public class Insertion {
         student[] stude = new student[size - unreserved];
         for (int i = unreserved - 1; i < size; i++) {
             stude[i] = array[i];
+            System.out.println("*******************");
+            System.out.println(stude[i].toString());
         }
-        System.out.println(stude.toString());
         return su;
     }
 }
