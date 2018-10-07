@@ -66,4 +66,20 @@ public class Insertion {
         }
         return s.substring(0, s.length() - 1);
     }
+    /**
+     * seat allotment in students.
+     *
+     * @param      array  The array
+     * @param      size   The size
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public String seatAllotment(Comparable[] array, int size, int unreserved, int bc, int st, int sc) {
+        Sort(array, size);
+        String su = "";
+        for (int i = 0; i < unreserved; i++) {
+            su += array[i].toString();
+        }
+        return su;
+    }
 }

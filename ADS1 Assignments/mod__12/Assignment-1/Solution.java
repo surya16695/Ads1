@@ -36,5 +36,7 @@ final class Solution {
             size++;
         }
         System.out.println(in.leaderboard(stu, size));
+        System.out.println();
+        System.out.println(in.seatAllotment(stu, size, unreserved, bc, st, sc));
     }
 }

@@ -98,7 +98,7 @@ class student implements Comparable<student> {
      */
     public String toString() {
         String s = "";
-        s += this.name+" "+this.total+" "+this.reservation;
+        s += this.name+","+this.total+","+this.reservation;
         return s;
     }
     /**
