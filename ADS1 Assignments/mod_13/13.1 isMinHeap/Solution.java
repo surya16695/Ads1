@@ -66,6 +66,10 @@ class Heap<key extends Comparable<key>> {
 		// for (int i = 0; i < array.length; i++) {
 		// 	array1[j+1] = array[i];
 		// }
+		if (array[0] == null) {
+			System.out.println("false");
+			return false;
+		}
 		int count = 0; 
 		for (int i = array.length-1; i >= 0; i--) {
 			int k = (i/2);
