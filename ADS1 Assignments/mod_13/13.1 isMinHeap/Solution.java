@@ -66,7 +66,7 @@ class Heap<key extends Comparable<key>> {
 		// for (int i = 0; i < array.length; i++) {
 		// 	array1[j+1] = array[i];
 		// }
-		if (array.length == 0) {
+		if (array[0] == null) {
 			return false;
 		}
 		int count = 0; 
