@@ -1,6 +1,14 @@
-import java.util.*;
+import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 class Solution {
-	public static void main(String[] args) {
+	/**
+	 * { function_description }.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String line = sc.nextLine();
 		// System.out.println(line);
@@ -54,11 +62,26 @@ class Solution {
 		}
 	}
 }
+/**
+ * Class for heap.
+ *
+ * @param      <key>  The key
+ */
 class Heap<key extends Comparable<key>> {
 	// key[] array1;
+	/**
+	constructor starts.
+	*/
 	Heap() {
 
 	}
+	/**
+	 * Determines if maximum heap.
+	 *
+	 * @param      array  The array
+	 *
+	 * @return     True if maximum heap, False otherwise.
+	 */
 	boolean isMaxHeap(key[] array) {
 		// System.out.println("**********************");
 		// System.out.println(Arrays.toString(array));
@@ -80,6 +103,14 @@ class Heap<key extends Comparable<key>> {
 			return false;
 		}
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      a     { parameter_description }
+	 * @param      b     { parameter_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	boolean less(key a, key b) {
 		// System.out.println(a, "---------", b);
 		// System.out.println(a.compareTo(b));
