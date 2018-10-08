@@ -4,6 +4,12 @@ import java.util.Scanner;
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    Solution() {
+
+    }
+    /**
      * { function_description }.
      *
      * @param      args  The arguments
@@ -13,7 +19,7 @@ class Solution {
         String line = sc.nextLine();
         // System.out.println(line);
         int n = Integer.parseInt(sc.nextLine());
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             switch (line) {
                 case "String" :
                 Heap<String> heap = new Heap<String>();
@@ -113,7 +119,7 @@ class Heap<key extends Comparable<key>> {
      *
      * @return     { description_of_the_return_value }
      */
-    boolean less(final key a, key b) {
+    boolean less(final key a, final key b) {
         // System.out.println(a, "---------", b);
         // System.out.println(a.compareTo(b));
         return a.compareTo(b) <= 0;
