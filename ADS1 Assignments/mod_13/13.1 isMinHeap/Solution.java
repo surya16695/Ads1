@@ -70,20 +70,20 @@ class Heap<key extends Comparable<key>> {
 		int count = 0; 
 		for (int i = array.length-1; i >= 0; i--) {
 			int k = (i/2);
-			if (less(array[i], array[k])) {
+			if (!less(array[i], array[k])) {
 				count++;
 			}
 		}
-		if (count != array.length - 1) {
-			return false;
-		}else {
+		if (count == array.length - 1) {
 			return true;
+		}else {
+			return false;
 		}
 	}
 	boolean less(key a, key b) {
 		// System.out.println(a, "---------", b);
 		// System.out.println(a.compareTo(b));
-		return a.compareTo(b) >= 0;
+		return a.compareTo(b) <= 0;
 	}
 	// int compareTo(key this, key that) {
 	// 	return 
