@@ -25,8 +25,9 @@ class Solution {
 				break;
 				case "Float" :
 				Heap<Float> heap2 = new Heap<Float>();
-				String[] line2 = sc.nextLine().split(",");
-				if (line2[0] == null) {
+				String str = sc.nextLine();
+				String[] line2 = str.split(",");
+				if (str.equals("")) {
 					System.out.println("false");
 					break;
 				}
@@ -66,9 +67,6 @@ class Heap<key extends Comparable<key>> {
 		// for (int i = 0; i < array.length; i++) {
 		// 	array1[j+1] = array[i];
 		// }
-		if (array[0] == null) {
-			return false;
-		}
 		int count = 0; 
 		for (int i = array.length-1; i >= 0; i--) {
 			int k = (i/2);
