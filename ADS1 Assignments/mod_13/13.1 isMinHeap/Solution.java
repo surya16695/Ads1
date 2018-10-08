@@ -83,8 +83,11 @@ class Heap<key extends Comparable<key>> {
 	boolean less(key a, key b) {
 		// System.out.println(a, "---------", b);
 		// System.out.println(a.compareTo(b));
-		return a.compareTo(b) > -1;
+		return a.compareTo(b) >= 0;
 	}
+	// int compareTo(key this, key that) {
+	// 	return 
+	// }
 }
 
 
