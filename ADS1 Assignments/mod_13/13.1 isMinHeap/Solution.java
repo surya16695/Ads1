@@ -10,7 +10,7 @@ class Solution {
 				case "String" :
 				Heap<String> heap = new Heap<String>();
 				String[] line4 = sc.nextLine().split(",");
-				System.out.println(Arrays.toString(line4));
+				// System.out.println(Arrays.toString(line4));
 				System.out.println(heap.isMaxHeap(line4));
 				break;
 				case "Integer" :
@@ -20,7 +20,7 @@ class Solution {
 				for (int v = 0; v < line1.length; v++) {
 					intea[v] = Integer.parseInt(line1[v]);
 				}
-				System.out.println(intea);
+				// System.out.println(intea);
 				System.out.println(heap1.isMaxHeap(intea));
 				break;
 				case "Float" :
@@ -30,7 +30,7 @@ class Solution {
 				for (int j = 0; j < line2.length; j++) {
 					floata[j] = Float.parseFloat(line2[j]);
 				}
-				System.out.println(Arrays.toString(floata));
+				// System.out.println(Arrays.toString(floata));
 				System.out.println(heap2.isMaxHeap(floata));
 				break;
 				case "Double" :
@@ -40,7 +40,7 @@ class Solution {
 				for (int k = 0; k < line3.length; k++) {
 					doublea[k] = Double.parseDouble(line3[k]);
 				}
-				System.out.println(Arrays.toString(doublea));
+				// System.out.println(Arrays.toString(doublea));
 				System.out.println(heap3.isMaxHeap(doublea));
 				break;
 
