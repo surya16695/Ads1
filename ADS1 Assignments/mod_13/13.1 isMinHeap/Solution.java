@@ -26,6 +26,9 @@ class Solution {
 				case "Float" :
 				Heap<Float> heap2 = new Heap<Float>();
 				String[] line2 = sc.nextLine().split(",");
+				if (line2[0] == null) {
+					System.out.println("false");
+				}
 				Float[] floata = new Float[line2.length];
 				for (int j = 0; j < line2.length; j++) {
 					floata[j] = Float.parseFloat(line2[j]);
