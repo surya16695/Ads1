@@ -96,11 +96,15 @@ class Heap<key extends Comparable<key>> {
         for (int i = array.length - 1; i >= 0; i--) {
             int k = (i / 2);
             if (!less(array[i], array[k])) {
-                return true;
-            } 
+                count++;
+            }
+        }
+        if (count == array.length - 1) {
+            return true;
+        } else {
+            return false;
+        }
     }
-     return false;
-}
     /**
      * { function_description }.
      *
@@ -109,7 +113,7 @@ class Heap<key extends Comparable<key>> {
      *
      * @return     { description_of_the_return_value }
      */
-    boolean less(final key a, final key b) {
+    boolean less(final key a, key b) {
         // System.out.println(a, "---------", b);
         // System.out.println(a.compareTo(b));
         return a.compareTo(b) <= 0;
