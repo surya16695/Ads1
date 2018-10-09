@@ -102,7 +102,7 @@ class Heap<key extends Comparable<key>> {
         for (int i = array.length - 1; i >= 0; i--) {
             int k = (i / 2);
             if (!less(array[i], array[k])) {
-                System.out.println("surya");
+                // System.out.println("surya");
                 count++;
             }
         }
