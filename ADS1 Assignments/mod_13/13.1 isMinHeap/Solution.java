@@ -25,7 +25,7 @@ class Solution {
                 Heap<String> heap = new Heap<String>();
                 String[] line4 = sc.nextLine().split(",");
                 // System.out.println(Arrays.toString(line4));
-                System.out.println(heap.isMaxHeap(line4));
+                System.out.println(heap.isMinHeap(line4));
                 break;
                 case "Integer" :
                 Heap<Integer> heap1 = new Heap<Integer>();
@@ -35,7 +35,7 @@ class Solution {
                     intea[v] = Integer.parseInt(line1[v]);
                 }
                 // System.out.println(intea);
-                System.out.println(heap1.isMaxHeap(intea));
+                System.out.println(heap1.isMinHeap(intea));
                 break;
                 case "Float" :
                 Heap<Float> heap2 = new Heap<Float>();
@@ -50,7 +50,7 @@ class Solution {
                     floata[j] = Float.parseFloat(line2[j]);
                 }
                 // System.out.println(Arrays.toString(floata));
-                System.out.println(heap2.isMaxHeap(floata));
+                System.out.println(heap2.isMinHeap(floata));
                 break;
                 case "Double" :
                 Heap<Double> heap3 = new Heap<Double>();
@@ -60,7 +60,7 @@ class Solution {
                     doublea[k] = Double.parseDouble(line3[k]);
                 }
                 // System.out.println(Arrays.toString(doublea));
-                System.out.println(heap3.isMaxHeap(doublea));
+                System.out.println(heap3.isMinHeap(doublea));
                 break;
                 default:
                 break;
@@ -90,7 +90,7 @@ class Heap<key extends Comparable<key>> {
      *
      * @return     True if maximum heap, False otherwise.
      */
-    boolean isMaxHeap(final key[] array) {
+    boolean isMinHeap(final key[] array) {
         // System.out.println("**********************");
         // System.out.println(Arrays.toString(array));
         // key[] array1 = (key[])new  Comparable[array.length+1];
@@ -102,14 +102,11 @@ class Heap<key extends Comparable<key>> {
         for (int i = array.length - 1; i >= 0; i--) {
             int k = (i / 2);
             if (!less(array[i], array[k])) {
+                System.out.println("surya");
                 count++;
             }
         }
-        if (count == array.length - 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return (count == array.length - 1);
     }
     /**
      * { function_description }.
@@ -122,7 +119,9 @@ class Heap<key extends Comparable<key>> {
     boolean less(final key a, final key b) {
         // System.out.println(a, "---------", b);
         // System.out.println(a.compareTo(b));
-        return a.compareTo(b) <= 0;
+        int c = a.compareTo(b);
+            return  (c <= 0);
+        // return a.compareTo(b) <= 0;
     }
     // int compareTo(key this, key that) {
     //  return
