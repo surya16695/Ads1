@@ -106,7 +106,7 @@ class Heap<key extends Comparable<key>> {
                 count++;
             }
         }
-        System.out.println(count+","+array.length);
+        // System.out.println(count+","+array.length);
         return (count == array.length);
     }
     /**
