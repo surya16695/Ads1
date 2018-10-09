@@ -120,7 +120,7 @@ class Heap<key extends Comparable<key>> {
         // System.out.println(a, "---------", b);
         // System.out.println(a.compareTo(b));
         int c = a.compareTo(b);
-            return  (c <= 0);
+            return  (c < 0);
         // return a.compareTo(b) <= 0;
     }
     // int compareTo(key this, key that) {
