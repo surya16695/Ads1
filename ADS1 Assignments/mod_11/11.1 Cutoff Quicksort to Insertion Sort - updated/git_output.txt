@@ -1,0 +1,8 @@
+[master 7ebd7c8] "ads1_m11_a1_v2: 4/4 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 3 files changed, 161 insertions(+), 162 deletions(-)
+ rewrite ADS - 1 assignments/M 11/11.1 Cutoff Quicksort to Insertion Sort - updated/Sort.java (98%)
+ rewrite ADS - 1 assignments/M 11/11.1 Cutoff Quicksort to Insertion Sort - updated/check_style_errors.txt (92%)
+ rewrite ADS - 1 assignments/M 11/11.1 Cutoff Quicksort to Insertion Sort - updated/result/score.json (70%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Anisha-Vulli/ADS---1.git
+   b431d02..7ebd7c8  master -> master
