@@ -108,8 +108,14 @@ class Solution {
 				break;
 				case "get":
 				Book old1 = new Book(line[1], line[2], Float.parseFloat(line[3]));
-				int c = bt.get(old1);
-				System.out.println(c);
+				Integer c = bt.get(old1);
+				if(c == null){
+					System.out.println("null");
+				}
+				else{
+					System.out.println(c);
+				}
+				
 				break;
 			}
 		}
