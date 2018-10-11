@@ -75,21 +75,23 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 	int get(Book key) {
         return get(root, key);
 	}
-    int get(Node x, Book key) {
+    Integer get(Node x, Book key) {
         if (key == null) {
         	throw new IllegalArgumentException("called get() with a null key");
         }
         if (x == null) {
-        	return 0;
+        	return null;
         }
         int cmp = key.getName().compareTo(x.data.getName());
         if      (cmp < 0) {
-        	return get(x.n1, key);
+        	get(x.n1, key);
         }
         else if (cmp > 0) {
-        	return get(x.n2, key);
-        }
+        	get(x.n2, key);
+        } else {
 	    return x.val;
+		}
+		return null;
     }
 }
 
