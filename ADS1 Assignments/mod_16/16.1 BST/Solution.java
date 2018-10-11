@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class Book {
 	String author;
 	String name;
@@ -42,10 +43,13 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 	Node root;
 	Book book;
 	int value;
-	BinarySt(String na, String auth, Float cost, int val) {
-		book = new Book(auth, na, cost);
-		value = val;
+	BinarySt() {
+
 	}
+	// BinarySt(String na, String auth, Float cost, int val) {
+	// 	book = new Book(auth, na, cost);
+	// 	value = val;
+	// }
 	void put(Book key, int val) {
 		root = put(root, key, val);
 	}
@@ -65,7 +69,10 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 		}
 		return x;
 	}
-     int get(Node x, Book key) {
+	int get(Book key) {
+        return get(root, key);
+	}
+    int get(Node x, Book key) {
         if (key == null) {
         	throw new IllegalArgumentException("called get() with a null key");
         }
@@ -81,4 +88,27 @@ class BinarySt<Key extends Comparable<Key>, Value> {
         }
 	    return x.val;
     }
+}
+
+class Solution {
+	Solution() {
+
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		BinarySt bt = new BinarySt();
+		while (sc.hasNext()) {
+			String[] line = sc.nextLine().split(",");
+			switch (line[0]) {
+				case "put":
+				Book old = new Book(line[1], line[2], Float.parseFloat(line[3]));
+				bt.put(old, Integer.parseInt(line[4]));
+				case "get":
+				Book old1 = new Book(line[1], line[2], Float.parseFloat(line[3]));
+				Node ne = new Node(old1, Integer.parseInt(line[4]));
+				int c = bt.get(ne, old1);
+				System.out.println(c);
+			}
+		}
+	}
 }
