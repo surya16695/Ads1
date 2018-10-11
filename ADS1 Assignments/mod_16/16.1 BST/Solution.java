@@ -67,7 +67,7 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 		if (temp > 0) {
 			x.n2 = put(x.n2, key, val);
 		}
-		else {
+		if (temp == 0) {
 			x.val = val;
 		}
 		return x;
