@@ -37,9 +37,9 @@ class Node {
 		this.val = v;
 		// n = new Node();
 	}
-	Node(Book b) {
-		this.data = b;
-	}
+	// Node(Book b) {
+	// 	this.data = b;
+	// }
 }
 
 class BinarySt<Key extends Comparable<Key>, Value> {
@@ -105,14 +105,16 @@ class Solution {
 		while (sc.hasNext()) {
 			String[] line = sc.nextLine().split(",");
 			switch (line[0]) {
+				// Node ne = new Node(old);
 				case "put":
 				Book old = new Book(line[1], line[2], Float.parseFloat(line[3]));
 				bt.put(old, Integer.parseInt(line[4]));
+				break;
 				case "get":
 				Book old1 = new Book(line[1], line[2], Float.parseFloat(line[3]));
-				Node ne = new Node(old1);
-				int c = bt.get(ne, old1);
+				int c = bt.get(old1);
 				System.out.println(c);
+				break;
 			}
 		}
 	}
