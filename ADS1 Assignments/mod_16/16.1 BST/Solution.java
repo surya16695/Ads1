@@ -64,10 +64,10 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 		if (temp < 0) {
 			x.n1 = put(x.n1, key, val);
 		}
-		if (temp > 0) {
+		else if (temp > 0) {
 			x.n2 = put(x.n2, key, val);
 		}
-		if (temp == 0) {
+		else if (temp == 0) {
 			x.val = val;
 		}
 		return x;
@@ -77,8 +77,12 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 		Node x = root;
 		while (x != null) {
 			int cmp = key.getName().compareTo(x.data.getName());
-			if (cmp < 0) x = x.n1;
-	        if (cmp > 0) x = x.n2;
+			if (cmp < 0) {
+				x = x.n1;
+			}
+	        if (cmp > 0) {
+	        	x = x.n2;
+	        }
 	        if (cmp == 0) {
 	        	return x.val;
 	        } 	
