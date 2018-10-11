@@ -79,7 +79,9 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 			int cmp = key.getName().compareTo(x.data.getName());
 			if      (cmp < 0) x = x.n1;
 	        else if (cmp > 0) x = x.n2;
-	        else return x.val;
+	        if (cmp == 0) {
+	        	return x.val;
+	        } 	
 		}
 		return null;
 	}
