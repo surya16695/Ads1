@@ -23,11 +23,13 @@ final class Solution {
             switch (line[0]) {
                 // Node ne = new Node(old);
                 case "put":
-                Book old = new Book(line[1], line[2], Float.parseFloat(line[1 + 2]));
+                Book old = new Book(line[1], line[2],
+                 Float.parseFloat(line[1 + 2]));
                 bt.put(old, Integer.parseInt(line[2 + 2]));
                 break;
                 case "get":
-                Book old1 = new Book(line[1], line[2], Float.parseFloat(line[1 + 2]));
+                Book old1 = new Book(line[1], line[2],
+                 Float.parseFloat(line[1 + 2]));
                 Integer c = bt.get(old1);
                 // if(c == null){
                 //  System.out.println("null");
@@ -35,7 +37,8 @@ final class Solution {
                     System.out.println(c);
                 // else{
                 // }
-                
+                break;
+                default:
                 break;
             }
         }
