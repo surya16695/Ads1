@@ -17,7 +17,7 @@ class CubeSum implements Comparable<CubeSum> {
     }
 
     public String toString() {
-        return sum + "";
+        return sum + "= "+i+" + "+j;
     }
 
 }
@@ -34,7 +34,7 @@ class Solution {
             pq.insert(new CubeSum(i, i));
         }
 
-        int pair = 1;
+        int mth = 1;
         int nth =0;
 
         CubeSum previous = new CubeSum(0,0); 
@@ -43,19 +43,20 @@ class Solution {
         while (!pq.isEmpty()) {
             CubeSum current = pq.delMin();
             if(current.sum == previous.sum){
-                pair++;
-                if(pair == M){
-                    nth++;
-                }
-                if (N == nth) {
-                    System.out.println(current);
-                    break;
-                }
-            }else {
-                pair = 1;
-            }
+                      mth++;
+                      if(mth == M){
+                        nth++;
+                      }
+                      if(nth == N){
+                        System.out.println(current.sum);
+                        break;
+                      }
+             }
+             else{
+                mth++;
+             }
+             previous = current;
 
-            previous = current;
             if (current.j < n)
                 pq.insert(new CubeSum(current.i, current.j + 1));
         }
