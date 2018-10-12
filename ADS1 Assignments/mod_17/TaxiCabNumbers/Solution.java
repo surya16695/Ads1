@@ -51,6 +51,8 @@ class Solution {
                     System.out.println(current);
                     break;
                 }
+            }else {
+                pair = 1;
             }
 
             previous = current;
