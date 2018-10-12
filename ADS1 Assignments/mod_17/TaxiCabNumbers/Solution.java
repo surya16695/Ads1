@@ -53,7 +53,7 @@ class Solution {
                       }
              }
              else{
-                mth++;
+                mth=1;
              }
              previous = current;
 
