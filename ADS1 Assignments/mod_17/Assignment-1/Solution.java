@@ -33,6 +33,8 @@ final class Solution {
              Integer.parseInt(t[2 + 1]),
              Integer.parseInt(t[2 + 2]), Integer.parseInt(t[2 + 2 + 1]),
               t[2 + 2 + 2]);
+            System.out.println(stu);
+            System.out.println();
             pq.insert(stu);
         }
         for (int j = 0; j < asize; j++) {
