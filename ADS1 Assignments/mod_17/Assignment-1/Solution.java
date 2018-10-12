@@ -45,7 +45,7 @@ final class Solution {
         System.out.println(str);
         System.out.println();
         for (int j  = 0; j < unreserved; j++) {
-            System.out.println(stud[j]+"\n");
+            System.out.println(stud[j]);
         }
         // System.out.println(Arrays.toString(stu));
     }
