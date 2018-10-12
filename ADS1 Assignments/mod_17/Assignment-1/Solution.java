@@ -17,7 +17,7 @@ final class Solution {
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        MinPQ<student> pq = new MinPQ<student>();
+        MaxPQ<student> pq = new MaxPQ<student>();
         int asize = (scan.nextInt());
         student stu = null;
         student[] stud = new student[asize];
@@ -33,16 +33,19 @@ final class Solution {
              Integer.parseInt(t[2 + 1]),
              Integer.parseInt(t[2 + 2]), Integer.parseInt(t[2 + 2 + 1]),
               t[2 + 2 + 2]);
-            System.out.println(stu);
-            System.out.println();
             pq.insert(stu);
         }
         for (int j = 0; j < asize; j++) {
-            stud[j] = pq.delMin();
+            stud[j] = pq.delMax();
         }
         String str = "";
         for (int j = 0; j < asize; j++) {
             str += stud[j].toString()+"\n";
+        }
+        System.out.println(str);
+        System.out.println();
+        for (int j  = 0; j < unreserved; j++) {
+            System.out.println(stud[j]+"\n");
         }
         // System.out.println(Arrays.toString(stu));
     }

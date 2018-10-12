@@ -1,5 +1,5 @@
 /**STUDENT.**/
-class student {
+class student implements Comparable<student>{
     /**
      * variable.
      */
@@ -152,7 +152,7 @@ class student {
     /**
      * time complexity is 1
      */
-      int compareTo(student that) {
+    public  int compareTo(student that) {
         if (this.gettotal() > that.gettotal()) {
             return 1;
         }
