@@ -54,17 +54,16 @@ class Solution {
 				} else {
 				Stock stock = new Stock(line[0], Float.parseFloat(line[1]));
 				max.insert(stock);
-				System.out.println(stock.name);
 				min.insert(stock);
 				}
 			}
 			for (int j = 1; j <= 5; j++) {
 				int c = 1;
 				System.out.println(max.delMax());
-				if (maxST.contains(max.delMax().getName())) {
-					maxST.put(max.delMax().getName(), c++);
-				}
-				maxST.put(max.delMax().getName(), c);
+				// if (maxST.contains(max.delMax().getName())) {
+				// 	maxST.put(max.delMax().getName(), c++);
+				// }
+				// maxST.put(max.delMax().getName(), c);
 				// if (max.delMax() == null) {
 				// 	System.out.println("Surya******************");
 				// }
