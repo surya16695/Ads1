@@ -16,15 +16,17 @@ class Solution {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
+        int num = sc.nextInt();
         sc.nextLine();
-        BinarysearchST<String, Integer> maxST = new BinarysearchST<String, Integer>();
-        BinarysearchST<String, Integer> minST = new BinarysearchST<String, Integer>();
-        while(!sc.hasNextInt()) {
+        BinarysearchST<String, Integer> maxST
+         = new BinarysearchST<String, Integer>();
+        BinarysearchST<String, Integer> minST
+         = new BinarysearchST<String, Integer>();
+        while (!sc.hasNextInt()) {
             int i = 0;
             MaxPQ<Stock> max = new MaxPQ<Stock>();
             MinPQ<Stock> min = new MinPQ<Stock>();
-            int range = N;
+            int range = num;
             for (i = 1; i < range + 1; i++) {
                 String[] line = sc.nextLine().split(",");
                 if (line[0].equals("0")) {
@@ -35,7 +37,7 @@ class Solution {
                 min.insert(stock);
                 }
             }
-            for (int j = 1; j <= 5; j++) {
+            for (int j = 1; j <= (2 + 2 + 1); j++) {
                 int c = 1;
                 System.out.println(max.delMax());
                 // if (maxST.contains(max.delMax().getName())) {
@@ -48,12 +50,12 @@ class Solution {
             }
             max = null;
             System.out.println();
-            for (int j = 0; j <= 4; j++) {
+            for (int j = 0; j <= 2 + 2; j++) {
                 System.out.println(min.delMin());
             }
             min = null;
             System.out.println();
-            if (range < 7 * N) {
+            if (range < (2 + 2 + 2 + 1) * num) {
                 i = range;
                 range = range + range;
             }
