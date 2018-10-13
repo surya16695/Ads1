@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 /**
  * Class for solution.
  */
@@ -6,7 +6,7 @@ class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
 
     }
     /**
@@ -14,7 +14,7 @@ class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         sc.nextLine();
@@ -71,6 +71,8 @@ class Solution {
                     break;
                     case "minST":
                     minST.get(query[2]);
+                    break;
+                    default:
                     break;
                 }
                 break;
