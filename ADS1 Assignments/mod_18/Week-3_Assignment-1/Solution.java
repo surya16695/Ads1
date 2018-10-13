@@ -37,12 +37,12 @@ class Solution {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		sc.nextLine();
-		while(sc.hasNext()) {
+		while(!sc.hasNextInt()) {
 			int i = 0;
 			MaxPQ max = new MaxPQ();
 			MinPQ min = new MinPQ();
 			int range = N;
-			for (i = 0; i < range + 1; i++) {
+			for (i = 1; i < range + 1; i++) {
 				String[] line = sc.nextLine().split(",");
 				if (line[0].equals("0")) {
 					break;
@@ -52,17 +52,20 @@ class Solution {
 				min.insert(stock);
 				}
 			}
-			for (int j = 0; j <= 4; j++) {
-				if (max.delMax() != null) {
-					System.out.println(max.delMax());
-				}
+			for (int j = 1; j <= 5; j++) {
+				System.out.println(max.delMax());
+				// if (max.delMax() == null) {
+				// 	System.out.println("Surya******************");
+				// }
 			}
+			max = null;
 			System.out.println();
 			for (int j = 0; j <= 4; j++) {
 				System.out.println(min.delMin());
 			}
+			min = null;
 			System.out.println();
-			if (range < 7 * range) {
+			if (range < 7 * N) {
 				i = range;
 				range = range + range;
 				
