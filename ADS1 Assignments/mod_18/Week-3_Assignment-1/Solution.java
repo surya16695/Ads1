@@ -63,7 +63,7 @@ class Solution {
 					System.out.println(min.delMin());
 				}
 			} catch (ArrayIndexOutOfBoundsException e) {
-				System.out.println("");
+				// System.out.println("");
 			}
 			System.out.println();
 			if (range < 7 * range) {
