@@ -1,10 +1,13 @@
 import java.util.*;
 class Stock implements Comparable<Stock> {
-	String name;
-	Float percent;
+	public String name;
+	public Float percent;
 	Stock(String name, Float f) {
 		this.name = name;
 		this.percent = f;
+	}
+	String getName() {
+		return this.name;
 	}
 	public int compareTo(Stock s) {
 		if (this.percent > s.percent) {
@@ -37,10 +40,12 @@ class Solution {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		sc.nextLine();
+		BinarysearchST<String, Integer> maxST = new BinarysearchST<String, Integer>();
+		BinarysearchST<String, Integer> minST = new BinarysearchST<String, Integer>();
 		while(!sc.hasNextInt()) {
 			int i = 0;
-			MaxPQ max = new MaxPQ();
-			MinPQ min = new MinPQ();
+			MaxPQ<Stock> max = new MaxPQ<Stock>();
+			MinPQ<Stock> min = new MinPQ<Stock>();
 			int range = N;
 			for (i = 1; i < range + 1; i++) {
 				String[] line = sc.nextLine().split(",");
@@ -49,11 +54,17 @@ class Solution {
 				} else {
 				Stock stock = new Stock(line[0], Float.parseFloat(line[1]));
 				max.insert(stock);
+				System.out.println(stock.name);
 				min.insert(stock);
 				}
 			}
 			for (int j = 1; j <= 5; j++) {
+				int c = 1;
 				System.out.println(max.delMax());
+				if (maxST.contains(max.delMax().getName())) {
+					maxST.put(max.delMax().getName(), c++);
+				}
+				maxST.put(max.delMax().getName(), c);
 				// if (max.delMax() == null) {
 				// 	System.out.println("Surya******************");
 				// }
@@ -69,9 +80,27 @@ class Solution {
 				i = range;
 				range = range + range;
 				
+			}	
+		}
+		int q = sc.nextInt();
+		while (sc.hasNext()) {
+			String[] query = sc.nextLine().split(",");
+			switch (query[0]) {
+				case "get":
+					switch (query[1]) {
+					case "maxST":
+					maxST.get(query[2]);
+					break;
+					case "minST":
+					minST.get(query[2]);
+					break;
+				}
+				break;
+				case "intersection":
+				break;
+				default:
+				break;
 			}
-
-				
 		}
 	}
 }
