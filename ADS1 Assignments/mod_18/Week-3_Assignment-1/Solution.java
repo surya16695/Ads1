@@ -42,7 +42,7 @@ class Solution {
 			MaxPQ max = new MaxPQ();
 			MinPQ min = new MinPQ();
 			int range = N;
-			for (i = 0; i < range; i++) {
+			for (i = 0; i < range + 1; i++) {
 				String[] line = sc.nextLine().split(",");
 				if (line[0].equals("0")) {
 					break;
@@ -51,19 +51,15 @@ class Solution {
 				max.insert(stock);
 				min.insert(stock);
 				}
-			} try {
-				for (int j = 0; j <= 4; j++) {
-					if (max.delMax() != null) {
-						
-						System.out.println(max.delMax());
-					}
+			}
+			for (int j = 0; j <= 4; j++) {
+				if (max.delMax() != null) {
+					System.out.println(max.delMax());
 				}
-				System.out.println();
-				for (int j = 0; j <= 4; j++) {
-					System.out.println(min.delMin());
-				}
-			} catch (ArrayIndexOutOfBoundsException e) {
-				// System.out.println("");
+			}
+			System.out.println();
+			for (int j = 0; j <= 4; j++) {
+				System.out.println(min.delMin());
 			}
 			System.out.println();
 			if (range < 7 * range) {
