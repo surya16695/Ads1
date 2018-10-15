@@ -37,9 +37,17 @@ final class Solution {
                 min.insert(stock);
                 }
             }
+            Stock[] stock1 = new Stock[3 * num];
+            for (int u = 0; u < 3 * num; u++) {
+                stock1[u] = max.delMax();
+            }
+            Stock[] stock2 = new Stock[3 * num];
+            for (int u = 0; u < 3 * num; u++) {
+                stock2[u] = min.delMin();
+            }
             for (int j = 1; j <= (2 + 2 + 1); j++) {
                 int c = 1;
-                System.out.println(max.delMax());
+                System.out.println(stock1[j]);
                 // if (maxST.contains(max.delMax().getName())) {
                 //  maxST.put(max.delMax().getName(), c++);
                 // }
@@ -51,7 +59,8 @@ final class Solution {
             max = null;
             System.out.println();
             for (int j = 0; j <= 2 + 2; j++) {
-                System.out.println(min.delMin());
+                System.out.println(stock2[j]);
+                // System.out.println(min.delMin());
             }
             min = null;
             System.out.println();
