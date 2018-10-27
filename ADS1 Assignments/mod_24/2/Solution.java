@@ -9,6 +9,12 @@ class Solution {
      *
      * @param      args  The arguments
      */
+    /**
+     * Constructs the object.
+     */
+    Solution() {
+
+    }
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = Integer.parseInt(sc.nextLine());
