@@ -5,16 +5,16 @@ import java.util.Scanner;
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
      * Main function.
      *
      * @param      args  The arguments
      */
-    /**
-     * Constructs the object.
-     */
-    Solution() {
-
-    }
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = Integer.parseInt(sc.nextLine());
