@@ -3,9 +3,9 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
     /**
-     * Main function
+     * Main function.
      *
      * @param      args  The arguments
      */
@@ -49,6 +49,8 @@ public class Solution {
                         System.out.println(each.name);
                     }
                 }
+                break;
+                default:
                 break;
             }
             b--;
