@@ -44,7 +44,7 @@ public class Solution {
                 }
                 break;
             case "GE":
-                System.out.println("Surya//////");
+                // System.out.println("Surya//////");
                 double high = Double.parseDouble(line2[1]);
                 for (Student each : binarysearchtree.keys()) {
                     if (each.marks >= high) {
