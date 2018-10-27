@@ -2,8 +2,16 @@ import java.util.Scanner;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * Class for solution.
+ */
 public class Solution {
-    public static void main(String[] args) {
+    /**
+     * Main function
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = Integer.parseInt(sc.nextLine());
         RedBlackBST<Student, Integer> binarysearchtree = new RedBlackBST<>();
@@ -28,10 +36,21 @@ public class Solution {
                 }
                 break;
             case "LE":
-                System.out.println("Surya//////");
+                double low = Double.parseDouble(line2[1]);
+                for (Student each : binarysearchtree.keys()) {
+                    if (each.marks <= low) {
+                        System.out.println(each.name);
+                    }
+                }
                 break;
             case "GE":
                 System.out.println("Surya//////");
+                double high = Double.parseDouble(line2[1]);
+                for (Student each : binarysearchtree.keys()) {
+                    if (each.marks >= high) {
+                        System.out.println(each.name);
+                    }
+                }
                 break;
             }
             b--;
