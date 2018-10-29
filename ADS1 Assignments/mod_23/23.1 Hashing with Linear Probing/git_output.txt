@@ -1,0 +1,6 @@
+[master 30072fb] "ads1_m23_a1: 5/5 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 4 files changed, 6 insertions(+), 1 deletion(-)
+ rewrite ADS - 1 assignments/M 23/23.1 Hashing with Linear Probing/result/score.json (73%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Anisha-Vulli/ADS---1.git
+   99d7f41..30072fb  master -> master
