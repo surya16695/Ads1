@@ -1,0 +1,10 @@
+Starting audit...
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\mod_5\5.2 Josephus Problem\Linkedlist.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\mod_5\5.2 Josephus Problem\Linkedlist.java:1:8: Unused import - java.util.Scanner. [UnusedImports]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\mod_5\5.2 Josephus Problem\Linkedlist.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\mod_5\5.2 Josephus Problem\Linkedlist.java:9:23: Variable 'data' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\mod_5\5.2 Josephus Problem\Linkedlist.java:13:24: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
+Audit done.
+Checkstyle ends with 5 errors.
+Starting audit...
+Audit done.
