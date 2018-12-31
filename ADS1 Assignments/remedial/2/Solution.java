@@ -51,7 +51,7 @@ class Solution {
 		RedBlackBST<Student, Integer> stuBst =  new RedBlackBST<>();
 		while(a > 0) {
 			String[] line = sc.nextLine().split(",");
-			student = new Student(line[0], line[1], line[2]);
+			student = new Student(line[1], line[2], line[0]);
 			stuBst.put(student, Integer.parseInt(line[0]));
 			a--;
 		}
