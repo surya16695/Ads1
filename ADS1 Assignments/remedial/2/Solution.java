@@ -82,7 +82,10 @@ class Solution {
 					if (each.getMarks() >= m) {
 						System.out.println(each.getName());
 					}
-				}				
+				}
+				break;
+                default:
+                break;				
 			}
 			b--;
 		}

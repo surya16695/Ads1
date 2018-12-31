@@ -369,7 +369,6 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:47:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:47:33: Parameter args should be final. [FinalParameters]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:52:22: 'while' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:61: switch without "default" clause. [MissingSwitchDefault]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:61:31: 'switch' is not followed by whitespace. [WhitespaceAround]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:66: Line is longer than 80 characters (found 93). [LineLength]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:67: Line is longer than 80 characters (found 83). [LineLength]
@@ -378,6 +377,6 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:76: Line has trailing spaces. [RegexpSingleline]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:81:66: ')' is preceded with whitespace. [ParenPad]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:83: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:85: Line has trailing spaces. [RegexpSingleline]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:88: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 32 errors.
+Checkstyle ends with 31 errors.
