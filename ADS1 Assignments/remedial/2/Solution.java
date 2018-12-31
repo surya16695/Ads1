@@ -1,10 +1,10 @@
 import java.util.*;
 class Student implements Comparable<Student>{
-	private String name;
+	String name;
 
-	private Double marks;
+	Double marks;
 
-	private Integer rollnumber;
+	Integer rollnumber;
 
 	Student(String na, String mar, String roll) {
 		this.name = na;
@@ -32,53 +32,51 @@ class Student implements Comparable<Student>{
 }
 
 class Solution {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int a = Integer.parseInt(sc.nextLine());
-		Student student = null;
-		RedBlackBST<Student, Integer> stuBst =  new RedBlackBST<>();
-		while(a > 0) {
-			String[] line = sc.nextLine().split(",");
-			student = new Student(line[0], line[1], line[2]);
-			stuBst.put(student, Integer.parseInt(line[0]));
-			a--;
-		}
-		int b = Integer.parseInt(sc.nextLine());
-		while (b > 0) {
-			String[] con = sc.nextLine().split(" ");
-			switch(con[0]) {
-				case "BE":
-				Double n1 = Double.parseDouble(con[1]);
-				Double n2 = Double.parseDouble(con[2]);
-				for (Student each : stuBst.keys()) {
-					if (each.getMarks() < n1 && each.getMarks() > n2) {
-						System.out.println(each.getName());
-					} else {
-						System.out.println("*****");
-					}
-				}
-				break;
-				case "GE":
-				Double mark = Double.parseDouble(con[1]);
-				for (Student each : stuBst.keys() ) {
-					if (each.getMarks() < mark) {
-						System.out.println(each.getName());
-					} else {
-						System.out.println("*****");
-					}
-				}
-				break;
-				case "LE":
-				Double m = Double.parseDouble(con[1]);
-				for (Student each : stuBst.keys() ) {
-					if (each.getMarks() > m) {
-						System.out.println(each.getName());
-					} else {
-						System.out.println("*****");
-					}
-				}				
-			}
-		}
-
-	}
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = Integer.parseInt(sc.nextLine());
+        RedBlackBST<Student, Integer> binarysearchtree = new RedBlackBST<>();
+        Student student = null;
+        while (a > 0) {
+            String[] line1 = sc.nextLine().split(",");
+            student = new Student(line1[1], line1[2], line1[0]);
+            binarysearchtree.put(student, Integer.parseInt(line1[0]));
+            a--;
+        }
+        int b = Integer.parseInt(sc.nextLine());
+        while (b > 0) {
+            String[] line2 = sc.nextLine().split(" ");
+            switch (line2[0]) {
+            case "BE":
+                double min = Double.parseDouble(line2[1]);
+                double max = Double.parseDouble(line2[2]);
+                for (Student each : binarysearchtree.keys()) {
+                    if (each.marks >= min && each.marks <= max) {
+                        System.out.println(each.name);
+                    }
+                }
+                break;
+            case "LE":
+                double low = Double.parseDouble(line2[1]);
+                for (Student each : binarysearchtree.keys()) {
+                    if (each.marks <= low) {
+                        System.out.println(each.name);
+                    }
+                }
+                break;
+            case "GE":
+                // System.out.println("Surya//////");
+                double high = Double.parseDouble(line2[1]);
+                for (Student each : binarysearchtree.keys()) {
+                    if (each.marks >= high) {
+                        System.out.println(each.name);
+                    }
+                }
+                break;
+                default:
+                break;
+            }
+            b--;
+        }
+    }
 }
