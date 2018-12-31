@@ -65,8 +65,6 @@ class Solution {
 				for (Student each : stuBst.keys()) {
 					if (each.getMarks() >= n1 && each.getMarks() <= n2) {
 						System.out.println(each.getName());
-					} else {
-						System.out.println("*****");
 					}
 				}
 				break;
@@ -75,9 +73,7 @@ class Solution {
 				for (Student each : stuBst.keys() ) {
 					if (each.getMarks() <= mark) {
 						System.out.println(each.getName());
-					} else {
-						System.out.println("*****");
-					}
+					} 
 				}
 				break;
 				case "LE":
@@ -85,8 +81,6 @@ class Solution {
 				for (Student each : stuBst.keys() ) {
 					if (each.getMarks() >= m) {
 						System.out.println(each.getName());
-					} else {
-						System.out.println("*****");
 					}
 				}				
 			}
