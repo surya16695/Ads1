@@ -19,16 +19,27 @@ class Student implements Comparable<Student>{
 	Double getMarks() {
 		return this.marks;
 	}
-
-	public int compareTo(Student that) {
-		if (this.marks < that.marks) {
-			return -1;
-		}
-		if (this.marks > that.marks) {
-			return 1;
-		}
-		return 0;
-	} 
+    public int compareTo(Student that) {
+        if (this.marks > that.marks) {
+            return 1;
+        }
+        if (this.marks < that.marks) {
+            return -1;
+        }
+        if (this.name.compareTo(that.name) > 0) {
+            return 1;
+        }
+        if (this.name.compareTo(that.name) < 0) {
+            return -1;
+        }
+        if (this.rollnumber > that.rollnumber) {
+            return 1;
+        }
+        if (this.rollnumber < that.rollnumber) {
+            return -1;
+        }
+        return 0;
+    } 
 }
 
 class Solution {
