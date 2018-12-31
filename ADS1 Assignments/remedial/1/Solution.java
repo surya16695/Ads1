@@ -39,14 +39,14 @@ class Solution{
 					if (hashtab.contains(Integer.parseInt(con[1]))) {
 						System.out.println(hashtab.get(Integer.parseInt(con[1])).getName());
 					} else {
-						System.out.println("Student Doesn't exist.");
+						System.out.println("Student doesn't exists...");
 					}
 				break;
 				case "2":
 					if (hashtab.contains(Integer.parseInt(con[1]))) {
 						System.out.println(hashtab.get(Integer.parseInt(con[1])).getMarks());
 					} else {
-						System.out.println("Student Doesn't exist.");
+						System.out.println("Student doesn't exists...");
 					}
 				break;
 				default:
