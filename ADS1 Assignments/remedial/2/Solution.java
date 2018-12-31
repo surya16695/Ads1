@@ -84,6 +84,7 @@ class Solution {
 					}
 				}				
 			}
+			b--;
 		}
 
 	}
