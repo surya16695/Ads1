@@ -63,7 +63,7 @@ class Solution {
 				Double n1 = Double.parseDouble(con[1]);
 				Double n2 = Double.parseDouble(con[2]);
 				for (Student each : stuBst.keys()) {
-					if (each.getMarks() < n1 && each.getMarks() > n2) {
+					if (each.getMarks() >= n1 && each.getMarks() <= n2) {
 						System.out.println(each.getName());
 					} else {
 						System.out.println("*****");
@@ -73,7 +73,7 @@ class Solution {
 				case "GE":
 				Double mark = Double.parseDouble(con[1]);
 				for (Student each : stuBst.keys() ) {
-					if (each.getMarks() < mark) {
+					if (each.getMarks() <= mark) {
 						System.out.println(each.getName());
 					} else {
 						System.out.println("*****");
@@ -83,7 +83,7 @@ class Solution {
 				case "LE":
 				Double m = Double.parseDouble(con[1]);
 				for (Student each : stuBst.keys() ) {
-					if (each.getMarks() > m) {
+					if (each.getMarks() >= m) {
 						System.out.println(each.getName());
 					} else {
 						System.out.println("*****");

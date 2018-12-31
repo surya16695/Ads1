@@ -371,7 +371,7 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:52:22: 'while' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:61: switch without "default" clause. [MissingSwitchDefault]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:61:31: 'switch' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:66: Line is longer than 80 characters (found 91). [LineLength]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:66: Line is longer than 80 characters (found 93). [LineLength]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:67: Line is longer than 80 characters (found 83). [LineLength]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:75:66: ')' is preceded with whitespace. [ParenPad]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\2\Solution.java:77: Line is longer than 80 characters (found 83). [LineLength]
