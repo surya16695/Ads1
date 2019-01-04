@@ -29,7 +29,7 @@ class Solution {
 					}
 				}
 				if (pers[count] == null) {
-					System.out.println("No Registrations");
+					System.out.println("NO Registrations");
 				}else {
 	        		System.out.println(pers[count]);
 	        		count++;
