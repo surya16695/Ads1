@@ -1,27 +1,27 @@
 class Person implements Comparable<Person>{
-	int registration;
-	int section;
-	int value = 0;
-	
-	Person(int registration, int section) {
-		this.registration = registration;
-		this.section = section;
+	int rId;
+	int jId;
+	int num = 0;
+
+	Person(int rId, int jId) {
+		this.rId = rId;
+		this.jId = jId;
 	}
 
 	public String toString() {
-		String ret = (this.registration+","+this.section);
+		String ret = (this.rId+","+this.jId);
 		return ret;
 	}
 
 	public int compareTo(Person that) {
-		if(this.value > that.value) {
+		if(this.num > that.num) {
 			return 1;
 		}
-		else if(this.value < that.value) {
+		else if(this.num < that.num) {
 			return -1;
 		}
 		else {
-			if(this.registration > that.registration) {
+			if(this.rId > that.rId) {
 				return 1;
 			}
 			return -1;
