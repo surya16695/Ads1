@@ -19,7 +19,7 @@ class Sorting {
 			}
 			else {
 				int flag = 0;
-				Iterable<String> str = biSearch1.keys();
+				// Iterable<String> str = biSearch1.keys();
 				for(String each : str) {
 					if(each.equals(i)) {
 						Integer v = biSearch1.get(i);
