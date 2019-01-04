@@ -28,8 +28,12 @@ class Solution {
 						}
 					}
 				}
-        		System.out.println(pers[count]);
-        		count++;
+				if (pers[count] == null) {
+					System.out.println("No Registrations");
+				}else {
+	        		System.out.println(pers[count]);
+	        		count++;
+	        	}
         	}else {
             	s.addPerson(new Person(Integer.parseInt(input[0]), Integer.parseInt(input[1])));
         	}

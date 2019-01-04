@@ -11,13 +11,13 @@ NO Registrations
 
 Your Output: 
 0,2
-null
-null
+No Registrations
+1,2
+2,3
 3,1
 4,3
 5,1
 6,2
-7,1
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########

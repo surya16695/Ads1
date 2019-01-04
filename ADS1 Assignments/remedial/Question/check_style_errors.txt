@@ -38,11 +38,13 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:16:52: '30' is a magic number. [MagicNumber]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:25: Line is longer than 80 characters (found 96). [LineLength]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:26: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:33:18: 'else' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:33:18: '}' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:34: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:33:34: 'else' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:33:34: '}' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:37:18: 'else' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:37:18: '}' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:38: Line is longer than 80 characters (found 96). [LineLength]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 17 errors.
 Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Sorting.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Sorting.java:1: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
