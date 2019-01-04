@@ -16,8 +16,9 @@ class Solution {
 				Person[] per = s.jcArray();
         		System.out.println(per[count]);
         		count++;
+        	}else {
+            	s.addPerson(new Person(Integer.parseInt(input[0]), Integer.parseInt(input[1])));
         	}
-            s.addPerson(new Person(Integer.parseInt(input[0]), Integer.parseInt(input[1])));
 		}
 	}
 }
