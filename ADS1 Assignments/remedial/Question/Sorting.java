@@ -68,6 +68,7 @@ class Sorting {
         }
         return false;
     }
+
     Person[] jcArray() {
     	return persons;
     }
