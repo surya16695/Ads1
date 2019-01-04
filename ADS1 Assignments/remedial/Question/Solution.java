@@ -12,7 +12,7 @@ class Solution {
 		while(sc.hasNextLine()) {
             String[] input = sc.nextLine().split(",");
             s.addPerson(new Person(Integer.parseInt(input[0]), Integer.parseInt(input[1])));
-            	if (input.equals("JC")) {
+            	if (input[0].equals("JC")) {
 					s.sort();
 					Person[] per = s.jcArray();
             		System.out.println(per[count]);
