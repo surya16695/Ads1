@@ -1,4 +1,0 @@
-[master f98d627] "remedial_ADS1_M1: 0/4 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
- 4 files changed, 18 insertions(+), 18 deletions(-)
- rewrite ADS1 Assignments/remedial/ffff/result/score.json (70%)
-fatal: unable to access 'https://github.com/surya16695/Ads1.git/': Failed to connect to 10.10.10.3 port 3128: Host unreachable
