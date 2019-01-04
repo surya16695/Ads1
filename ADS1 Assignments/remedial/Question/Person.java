@@ -23,10 +23,10 @@ public class Person implements Comparable<Person>{
 		if (this.rid > that.rid) {
 			return -1;
 		}
-		if (this.jid < that.jid) {
+		if (this.jid > that.jid) {
 			return 1;
 		}
-		if (this.jid > that.jid) {
+		if (this.jid < that.jid) {
 			return -1;
 		}
 		return 0;
