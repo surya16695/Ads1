@@ -14,7 +14,7 @@ class Solution {
             String[] input = sc.nextLine().split(",");
         	if (input[0].equals("JC")) {
         		Person[] pers = new Person[30];
-				s.sort();
+				// s.sort();
 				// int k = 0;
 				Person[] per = s.jcArray();
 				for (int i = 0; i < s.size(); i++) {
