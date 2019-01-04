@@ -366,12 +366,9 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Sorted.java:25:74: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Sorted.java:26:67: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Sorted.java:26:68: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Sorted.java:31:27: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Sorted.java:32:49: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Sorted.java:34:49: ',' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Sorted.java:39:9: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 31 errors.
+Checkstyle ends with 28 errors.
 Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\StdIn.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\StdIn.java:28: Line is longer than 80 characters (found 84). [LineLength]

@@ -28,12 +28,12 @@ class Sorting {
 					flag = 1;
 				}
 			}
-			if(flag == 0) {
-				biSearch1.put(i,1);
-				per.num = 1;
-				biSearch2.put(i,per);
-				minPq.insert(per);
-			}
+			// if(flag == 0) {
+			// 	biSearch1.put(i,1);
+			// 	per.num = 1;
+			// 	biSearch2.put(i,per);
+			// 	minPq.insert(per);
+			// }
 		}
 	}
 	public Person min() {
