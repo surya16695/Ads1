@@ -17,9 +17,9 @@ class Solution {
 				}
 				break;
 				case 2:
-					String i = input[1];
+					String str = input[1];
 					Person p = new Person(Integer.parseInt(input[0]),Integer.parseInt(input[1]));
-					s.sort(i, p);
+					s.sort(str, p);
 				break;
 			}
 		}
