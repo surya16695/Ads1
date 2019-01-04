@@ -13,7 +13,7 @@ public class Person implements Comparable<Person>{
 	}
 	public String toString(){
 		String str = "";
-		str += this.rid + ", "+this.jid;
+		str += this.rid + ","+this.jid;
 		return str;
 	}
 	public int compareTo(Person that) {
