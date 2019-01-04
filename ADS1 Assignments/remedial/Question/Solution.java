@@ -16,14 +16,6 @@ class Solution {
         		int a = perA.length;
 				s.sort();
 				Person[] per = s.jcArray();
-				for (Person each: per) {
-					for (Person e: perA ) {
-						if (each.getJid() != e.getJid()) {
-							perA[++a] = each;
-						}		
-						
-					}
-				}
         		System.out.println(perA[count]);
         		count++;
         	}else {
