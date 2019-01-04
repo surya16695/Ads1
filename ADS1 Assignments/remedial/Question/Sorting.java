@@ -73,4 +73,18 @@ class Sorting {
     	return persons;
     }
 
+ //    void addIng() {
+ //    	Person[] p = new Person[30];
+ //    	int i = 0;
+	// 	for (Person each: persons) {
+	// 		if (p[i] == null) {
+	//     		p[i] = persons[i];
+				
+	// 		} else if (p[i].getJid() != each.getJid() && p[i].getRid() ) {
+	//     		p[i++] = persons[i];
+    			
+ //    		}
+	// 		i++;
+	// 	}
+	// }
 }
