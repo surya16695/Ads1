@@ -12,13 +12,12 @@ class Solution {
 		while(sc.hasNextLine()) {
             String[] input = sc.nextLine().split(",");
             s.addPerson(new Person(Integer.parseInt(input[0]), Integer.parseInt(input[1])));
-            switch (input[0]) {
-            	case "JC":
+            	if (input.equals("JC")) {
 					s.sort();
 					Person[] per = s.jcArray();
             		System.out.println(per[count]);
             		count++;
-            }
+            	}
 		}
 	}
 }
