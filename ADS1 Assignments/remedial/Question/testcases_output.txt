@@ -10,11 +10,12 @@ NO Registrations
 6,2
 
 Your Output: 
+0, 2
 Exception in thread "main" java.lang.NumberFormatException: For input string: "JC"
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
 	at java.base/java.lang.Integer.parseInt(Integer.java:652)
 	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-	at Solution.main(Solution.java:14)
+	at Solution.main(Solution.java:20)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -33,11 +34,12 @@ Expected Output:
 12,3
 
 Your Output: 
+0, 6
 Exception in thread "main" java.lang.NumberFormatException: For input string: "JC"
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
 	at java.base/java.lang.Integer.parseInt(Integer.java:652)
 	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-	at Solution.main(Solution.java:14)
+	at Solution.main(Solution.java:20)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -50,11 +52,12 @@ Expected Output:
 6,4
 
 Your Output: 
+0, 8
 Exception in thread "main" java.lang.NumberFormatException: For input string: "JC"
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
 	at java.base/java.lang.Integer.parseInt(Integer.java:652)
 	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-	at Solution.main(Solution.java:14)
+	at Solution.main(Solution.java:20)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -74,10 +77,11 @@ Expected Output:
 10,1
 
 Your Output: 
+0, 4
 Exception in thread "main" java.lang.NumberFormatException: For input string: "JC"
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
 	at java.base/java.lang.Integer.parseInt(Integer.java:652)
 	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-	at Solution.main(Solution.java:14)
+	at Solution.main(Solution.java:20)
 ----------------------------------------
 

@@ -11,13 +11,13 @@ class Solution {
         int count = 0;
 		while(sc.hasNextLine()) {
             String[] input = sc.nextLine().split(",");
+        	if (input[0].equals("JC")) {
+				s.sort();
+				Person[] per = s.jcArray();
+        		System.out.println(per[count]);
+        		count++;
+        	}
             s.addPerson(new Person(Integer.parseInt(input[0]), Integer.parseInt(input[1])));
-            	if (input[0].equals("JC")) {
-					s.sort();
-					Person[] per = s.jcArray();
-            		System.out.println(per[count]);
-            		count++;
-            	}
 		}
 	}
 }

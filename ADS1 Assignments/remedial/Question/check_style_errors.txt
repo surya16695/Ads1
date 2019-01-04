@@ -33,7 +33,7 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:8:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:8:33: Parameter args should be final. [FinalParameters]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:12:22: 'while' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:14: Line is longer than 80 characters (found 92). [LineLength]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:20: Line is longer than 80 characters (found 92). [LineLength]
 Audit done.
 Checkstyle ends with 10 errors.
 Starting audit...
