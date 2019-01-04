@@ -19,7 +19,7 @@ class Solution {
 				for (Person each: per) {
 					for (Person e: perA ) {
 						if (each.getJid() != e.getJid()) {
-							perA[a++] = each;
+							perA[++a] = each;
 						}		
 						
 					}
