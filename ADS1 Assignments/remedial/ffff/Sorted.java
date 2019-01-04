@@ -11,32 +11,31 @@ class Sorting {
 		minPq = new MinPQ<>();
 	}
 	void sort(String i, Person per) {	
-			if(biSearch1.isEmpty()) {
+		if(biSearch1.isEmpty()) {
+			biSearch1.put(i,1);
+			per.num = 1;
+			biSearch2.put(i,per);
+			minPq.insert(per);
+		}
+		else {
+			int flag = 0;
+			for(String each :  biSearch1.keys()) {
+				if(each.equals(i)) {
+					Integer v = biSearch1.get(i);
+					biSearch1.put(i,biSearch1.get(i)+1);
+					per.num = biSearch1.get(i)+1;
+					minPq.insert(per);
+					flag = 1;
+				}
+			}
+			if(flag == 0) {
 				biSearch1.put(i,1);
 				per.num = 1;
 				biSearch2.put(i,per);
 				minPq.insert(per);
 			}
-			else {
-				int flag = 0;
-				// Iterable<String> str = biSearch1.keys();
-				for(String each : str) {
-					if(each.equals(i)) {
-						Integer v = biSearch1.get(i);
-						biSearch1.put(i,biSearch1.get(i)+1);
-						per.num = biSearch1.get(i)+1;
-						minPq.insert(per);
-						flag = 1;
-					}
-				}
-				if(flag == 0) {
-					biSearch1.put(i,1);
-					per.num = 1;
-					biSearch2.put(i,per);
-					minPq.insert(per);
-				}
-			}
 		}
+	}
 	public Person min() {
 		return minPq.delMin();
 	}
