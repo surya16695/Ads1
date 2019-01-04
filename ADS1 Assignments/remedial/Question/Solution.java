@@ -28,7 +28,7 @@ class Solution {
 						}
 					}
 				}
-        		System.out.println(per[count]);
+        		System.out.println(pers[count]);
         		count++;
         	}else {
             	s.addPerson(new Person(Integer.parseInt(input[0]), Integer.parseInt(input[1])));
