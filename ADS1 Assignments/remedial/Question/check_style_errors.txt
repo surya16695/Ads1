@@ -21,8 +21,10 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Person.java:19:9: Class 'Person' looks like designed for extension (can be subclassed), but the method 'compareTo' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Person' final or making the method 'compareTo' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Person.java:19:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Person.java:19:30: Parameter that should be final. [FinalParameters]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Person.java:26:18: 'else' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Person.java:26:18: '}' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 22 errors.
+Checkstyle ends with 24 errors.
 Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Question\Solution.java:1: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]

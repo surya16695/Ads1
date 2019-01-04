@@ -19,14 +19,11 @@ public class Person implements Comparable<Person>{
 	public int compareTo(Person that) {
 		if (this.rid < that.rid) {
 			return 1;
-		}
-		if (this.rid > that.rid) {
+		} else if (this.rid > that.rid) {
 			return -1;
-		}
-		if (this.jid > that.jid) {
+		} else if (this.jid > that.jid) {
 			return 1;
-		}
-		if (this.jid < that.jid) {
+		}else if (this.jid < that.jid) {
 			return -1;
 		}
 		return 0;
