@@ -20,8 +20,8 @@ class Sorting {
 				else {
 					int flag = 0;
 					Iterable<String> str = biSearch1.keys();
-					for(String cat : str) {
-						if(cat.equals(i)) {
+					for(String each : str) {
+						if(each.equals(i)) {
 							Integer v = biSearch1.get(i);
 							biSearch1.put(i,biSearch1.get(i)+1);
 							per.num = biSearch1.get(i)+1;
