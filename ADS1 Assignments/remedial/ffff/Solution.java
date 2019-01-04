@@ -4,29 +4,30 @@ class Solution {
 		Scanner sc = new Scanner(System.in);
 		BinarySearchST<String, Integer> biSearch1= new BinarySearchST<>();
 		BinarySearchST<String, Person> biSearch2 = new BinarySearchST<>();
-		MinPQ<Person> min = new MinPQ<>();
+		MinPQ<Person> minPq = new MinPQ<>();
 		while(sc.hasNext()) {
 			String[] input = sc.nextLine().split(",");
 			// System.out.println(input.length);
-			switch(input[0]) {
-				// case 1:
-				// if(min.isEmpty()) {
-				// 	System.out.println("NO Registrations");
-				// 	break;
-				// }
-				// else {
-				// 	System.out.println(min.delMin());
-				// }
-				// break;
-				case "JC":
+			switch(input.length) {
+				case 1:
+				if(minPq.isEmpty()) {
+					System.out.println("NO Registrations");
+					break;
+				}
+				else {
+					System.out.println(minPq.delMin());
+				}
+				break;
+				case 2:
 				String i = input[1];
+				System.out.println(i);
 				Person p = new Person(Integer.parseInt(input[0]),Integer.parseInt(input[1]));
 				// biSearch2.put(i,p);
 				if(biSearch1.isEmpty()) {
 					biSearch1.put(i,1);
 					p.num = 1;
 					biSearch2.put(i,p);
-					min.insert(p);
+					minPq.insert(p);
 				}
 				else {
 					int fl = 0;
@@ -36,7 +37,7 @@ class Solution {
 							Integer v = biSearch1.get(i);
 							biSearch1.put(i,biSearch1.get(i)+1);
 							p.num = biSearch1.get(i)+1;
-							min.insert(p);
+							minPq.insert(p);
 							fl = 1;
 						}
 					}
@@ -44,10 +45,9 @@ class Solution {
 						biSearch1.put(i,1);
 						p.num = 1;
 						biSearch2.put(i,p);
-						min.insert(p);
+						minPq.insert(p);
 					}
-				}
-				break;	
+				}	
 			}
 		}
 	}
