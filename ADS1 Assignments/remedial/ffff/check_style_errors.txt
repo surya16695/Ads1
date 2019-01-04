@@ -354,7 +354,7 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Solution.java:43:43: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Solution.java:44:65: ',' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Solution.java:46:65: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Solution.java:49: Line has trailing spaces. [RegexpSingleline]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\ffff\Solution.java:50: Line has trailing spaces. [RegexpSingleline]
 Audit done.
 Checkstyle ends with 33 errors.
 Starting audit...

@@ -46,7 +46,8 @@ class Solution {
 						biSearch2.put(i,p);
 						min.insert(p);
 					}
-				}	
+				}
+				break;	
 			}
 		}
 	}
