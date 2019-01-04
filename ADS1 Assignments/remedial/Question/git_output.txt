@@ -1,9 +1,0 @@
-warning: LF will be replaced by CRLF in ADS1 Assignments/remedial/Question/ST.java.
-The file will have its original line endings in your working directory.
-[master aca5a70] "remedial_ADS1_M1: 0/4 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
- 7 files changed, 330 insertions(+), 6 deletions(-)
- create mode 100644 ADS1 Assignments/remedial/Question/ST.class
- create mode 100644 ADS1 Assignments/remedial/Question/ST.java
- rewrite ADS1 Assignments/remedial/Question/Solution.class (100%)
- rewrite ADS1 Assignments/remedial/Question/result/score.json (70%)
-fatal: unable to access 'https://github.com/surya16695/Ads1.git/': Failed to connect to 10.10.10.3 port 3128: Host unreachable
