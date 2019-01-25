@@ -29,6 +29,7 @@ class Solution {
 		}
 		ST<Integer, String[]> finalst = new ST<Integer, String[]>();
 		List list = new List();
+		int x= 0;
 		for (int a = 0; a < 9 ; a++) {
 			int count = 0;
 			if (tree[a].contains(word)) {
@@ -42,10 +43,11 @@ class Solution {
 
 		}
 		list.soRt();
+		list.reverse();
 		System.out.println(list);
 		String answer = "";
 		int ansnum = 0;
-		for (int b = 0; b < list.size(); b++) {
+		for (int b = 0; b < 9; b++) {
 			if (finalst.contains(list.get(b))) {
 				answer += toString(list.get(b), finalst.get(list.get(b)))+"\n";
 				ansnum += finalst.get(list.get(b)).length;

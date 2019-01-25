@@ -354,6 +354,17 @@ public final class List {
     public void soRt() {
         Arrays.sort(list);
     }
+    public void reverse() {
+        reverse(list);
+    }
+    public static void reverse(int a[]) { 
+        int n = a.length;
+        int[] b = new int[n]; 
+        int j = n; 
+        for (int i = 0; i < n; i++) { 
+            b[j - 1] = a[i]; 
+            j = j - 1; 
+    } 
     /**
      * { function_description }.
      *
@@ -427,5 +438,6 @@ public final class List {
     //         }
     //     }
     // }
+    }
 }
 
