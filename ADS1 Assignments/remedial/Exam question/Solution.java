@@ -3,7 +3,7 @@ import java.io.*;
 
 class Solution {
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 		String word = sc.nextLine();
 		ST<String, String>[] tree = new ST[9];
@@ -44,9 +44,8 @@ class Solution {
 		}
 		if (count == 9) {
 			System.out.println("word is not present in any file");
-			
+			return;
 		}
-		// list1.soRt();
 		// System.out.println(list1);
 		// System.out.println(list.size());
 		String answer = "";
