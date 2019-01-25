@@ -255,10 +255,13 @@ public final class List {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
-        if (get(0) == 0) {
-            str += "\nInvalid Position Exception";
-        }
+        // if (get(0) == 0) {
+        //     str += "\nInvalid Position Exception";
+        // }
         return str;
+    }
+    public int[] array() {
+        return list;
     }
     /**
      * Contains return true if the list has the item passed as an argument to.
