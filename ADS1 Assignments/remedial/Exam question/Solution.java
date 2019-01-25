@@ -42,14 +42,17 @@ class Solution {
 			}
 
 		}
-		System.out.println(word+":");
 		list.soRt();
 		String answer = "";
+		int ansnum = 0;
 		for (int b = 0; b < list.size(); b++) {
 			if (finalst.contains(list.get(b))) {
 				answer += toString(list.get(b), finalst.get(list.get(b)))+"\n";
+				ansnum += finalst.get(list.get(b)).length;
 			}
 		}
+		System.out.println(word+":"+ansnum);
+		System.out.println(answer);
 	}
 
 	public static String toString(int b, String[] arr) {
