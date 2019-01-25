@@ -29,20 +29,20 @@ class Solution {
 		}
 		ST<Integer, String[]> finalst = new ST<Integer, String[]>();
 		List list = new List();
-		int x= 0;
 		for (int a = 0; a < 9 ; a++) {
 			int count = 0;
 			if (tree[a].contains(word)) {
 				String[] as = tree[a].get(word).split(" ");
+				// System.out.println(as);
 				finalst.put(a, as);
-				list.add(a);
-				x++;
+				list.add(as.length);
 				// toString(a,as);
 				count++;	
 			}
 
 		}
 		list.soRt();
+		System.out.println(list);
 		String answer = "";
 		int ansnum = 0;
 		for (int b = 0; b < list.size(); b++) {

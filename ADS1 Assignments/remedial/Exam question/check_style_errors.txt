@@ -19,10 +19,9 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:11:66: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:20:66: ')' is preceded with whitespace. [ParenPad]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:24: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:32:22: '=' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:33:37: '9' is a magic number. [MagicNumber]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:33:38: ';' is preceded with whitespace. [NoWhitespaceBefore]
-[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:41: Line has trailing spaces. [RegexpSingleline]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:32:37: '9' is a magic number. [MagicNumber]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:32:38: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:40: Line has trailing spaces. [RegexpSingleline]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:50: Line is longer than 80 characters (found 95). [LineLength]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:50:90: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:50:91: '+' is not followed by whitespace. [WhitespaceAround]
@@ -42,7 +41,7 @@ Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:60:44: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\Solution.java:60:45: '+' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 35 errors.
+Checkstyle ends with 34 errors.
 Starting audit...
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\ST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\msit\first year\Ads1\ADS1 Assignments\remedial\Exam question\ST.java:6: Line has trailing spaces. [RegexpSingleline]
