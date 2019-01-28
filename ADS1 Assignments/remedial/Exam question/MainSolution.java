@@ -79,13 +79,14 @@ class Program {
 	SeparateChainingHashST<String, PositionId> loadWords() throws Exception {
 		SeparateChainingHashST<String, PositionId> st= new SeparateChainingHashST<>();
 
-		List<DataGiven> diList = new List<>();
 
 		for (int i = 0; i < 9; i++) {
 
 			Scanner s = new Scanner(new File("files/"+ i + ".txt"));
 
 			String[] str = s.nextLine().split(" ");
+
+			List<DataGiven> diList = new List<>();
 
 			for (int j = 0; j < str.length; j++) {
 
@@ -104,14 +105,14 @@ class Program {
 				}
 				int count = stri.length();
 				DataGiven data = new DataGiven(i, count, stri);
-				diList.add(data);
-				PositionId pi = new PositionId(totalcount, diList);
 
 				if (st.contains(str[j])) {
 					st.get(str[j]).setTotal(data.getfreq());
 					st.get(str[j]).list.add(data);
 
 				} else {
+					diList.add(data);
+					PositionId pi = new PositionId(totalcount, diList);
 					pi.setTotal(data.getfreq());
 					st.put(str[j], pi);
 				}
@@ -120,3 +121,20 @@ class Program {
 		return st;
 	}
 }
+
+class MainSolution {
+	public static void main(String[] args) throws Exception{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		Program pr = new Program();
+		SeparateChainingHashST<String, PositionId> seperate = pr.loadWords();
+		if (seperate.contains(s)) {
+			System.out.println(s+":"+seperate.get(s).getTotalfreq());
+			seperate.get(s).outPut();
+		}
+		else {
+			System.out.println("word is not present in any file");
+		}
+	}
+}
+
