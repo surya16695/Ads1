@@ -6,8 +6,8 @@ moana:3
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -25,8 +25,8 @@ by:46
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -40,8 +40,8 @@ king:46
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -59,8 +59,8 @@ long:23
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -79,8 +79,8 @@ as:77
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -99,8 +99,8 @@ are:39
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -119,8 +119,8 @@ a:284
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -139,8 +139,8 @@ for:131
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 
 ########## Testcase 8: Failed ##########
@@ -159,8 +159,8 @@ and:320
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 
 ########## Testcase 9: Failed ##########
@@ -170,7 +170,7 @@ word is not present in any file
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 	at List.add(List.java:41)
-	at Program.loadWords(MainSolution.java:114)
-	at MainSolution.main(MainSolution.java:130)
+	at Program.loadWords(MainSolution.java:109)
+	at MainSolution.main(MainSolution.java:129)
 ----------------------------------------
 

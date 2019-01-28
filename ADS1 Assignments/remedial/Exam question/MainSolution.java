@@ -79,14 +79,12 @@ class Program {
 	SeparateChainingHashST<String, PositionId> loadWords() throws Exception {
 		SeparateChainingHashST<String, PositionId> st= new SeparateChainingHashST<>();
 
-
 		for (int i = 0; i < 9; i++) {
 
 			Scanner s = new Scanner(new File("files/"+ i + ".txt"));
 
 			String[] str = s.nextLine().split(" ");
 
-			List<DataGiven> diList = new List<>();
 
 			for (int j = 0; j < str.length; j++) {
 
@@ -111,6 +109,7 @@ class Program {
 					st.get(str[j]).list.add(data);
 
 				} else {
+					List<DataGiven> diList = new List<>();
 					diList.add(data);
 					PositionId pi = new PositionId(totalcount, diList);
 					pi.setTotal(data.getfreq());
