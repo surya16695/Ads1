@@ -5,9 +5,9 @@ class DataGiven {
 	int docId;
 	int frequency;
 	String position;
-	DataGiven(int id, int b, String arr) {
+	DataGiven(int id, String arr) {
 		this.docId = id;
-		this.frequency = b;
+		this.frequency = arr.length();
 		this.position = arr;
 	}
 	String getPostion() {
@@ -21,10 +21,15 @@ class DataGiven {
 	int getfreq() {
 		return this.frequency;
 	}
-	int compareTo(int numb){
-		if (this.docId>numb) {
+	int compareTo(DataGiven d){
+		if(this.frequency > d.getfreq()) {
 			return 1;
-		} if (this.docId<numb) {
+		} if(this.frequency < d.getfreq()) {
+			return -1;
+		}
+		if (this.docId>d.getWord()) {
+			return 1;
+		} if (this.docId<d.getWord()) {
 			return -1;
 		}
 		return 0;
@@ -56,14 +61,6 @@ class PositionId {
 	}
 	void setTotal(int a ){
 		totalfreq += a; 
-	}
-	public int compareTo( int num) {
-		if(this.totalfreq > num) {
-			return 1;
-		} if(this.totalfreq < num) {
-			return -1;
-		}
-		return 0;
 	}
 	public void  outPut() {
 		for (int i = 0; i < list.size(); i++) {
@@ -101,20 +98,21 @@ class Program {
 					}
 					
 				}
-				int count = stri.length();
-				DataGiven data = new DataGiven(i, count, stri);
+				// int count = stri.length();
+				DataGiven data = new DataGiven(i, stri);
 
-				if (st.contains(str[j])) {
-					st.get(str[j]).setTotal(data.getfreq());
-					st.get(str[j]).list.add(data);
+				// if (st.contains(str[j])) {
+				// 	// st.get(str[j]).setTotal(data.getfreq());
+				// 	break;
+					// st.get(str[j]).list.add(data);
 
-				} else {
+				// } else {
 					LinkedList<DataGiven> diList = new LinkedList<>();
 					diList.add(data);
 					PositionId pi = new PositionId(totalcount, diList);
 					pi.setTotal(data.getfreq());
 					st.put(str[j], pi);
-				}
+				// }
 			}
 		}
 		return st;
