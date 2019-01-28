@@ -127,10 +127,9 @@ class MainSolution {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
 		Program pr = new Program();
-		SeparateChainingHashST<String, PositionId> seperate = pr.loadWords();
-		if (seperate.contains(s)) {
-			System.out.println(s+":"+seperate.get(s).getTotalfreq());
-			seperate.get(s).outPut();
+		if (pr.loadWords().contains(s)) {
+			System.out.println(s+":"+pr.loadWords().get(s).getTotalfreq());
+			pr.loadWords().get(s).outPut();
 		}
 		else {
 			System.out.println("word is not present in any file");
