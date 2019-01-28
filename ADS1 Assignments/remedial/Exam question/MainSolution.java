@@ -40,15 +40,15 @@ class DataGiven {
 
 class PositionId {
 	int totalfreq;
-	List<DataGiven> list;
-	PositionId(int freq, List<DataGiven> l) {
+	LinkedList<DataGiven> list;
+	PositionId(int freq, LinkedList<DataGiven> l) {
 		this.totalfreq = freq;
 		this.list = l;
 	}
 	int getTotalfreq() {
 		return this.totalfreq;
 	}
-	List<DataGiven> getList() {
+	LinkedList<DataGiven> getList() {
 		return this.list;
 	}
 	void setList(DataGiven d) {
@@ -109,8 +109,7 @@ class Program {
 					st.get(str[j]).list.add(data);
 
 				} else {
-					System.out.println("**************************");
-					List<DataGiven> diList = new List<>();
+					LinkedList<DataGiven> diList = new LinkedList<>();
 					diList.add(data);
 					PositionId pi = new PositionId(totalcount, diList);
 					pi.setTotal(data.getfreq());
