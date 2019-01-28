@@ -109,6 +109,7 @@ class Program {
 					st.get(str[j]).list.add(data);
 
 				} else {
+					System.out.println("**************************");
 					List<DataGiven> diList = new List<>();
 					diList.add(data);
 					PositionId pi = new PositionId(totalcount, diList);
